@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="KD Monogram">
+  <style>
+    .bg { fill: #111317; }
+    .ring { stroke: rgba(255,255,255,0.16); }
+    .ink { fill: #F8FAFC; }
+    .dot { fill: #14B8A6; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #141619; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="14"/>
+  <rect class="ring" x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke-width="1"/>
+  <text x="29" y="40" text-anchor="middle" font-family="Geist, system-ui, -apple-system, sans-serif" font-weight="600" font-size="25" letter-spacing="-0.04em" class="ink">KD</text>
+  <circle class="dot" cx="49" cy="21" r="3.5"/>
+</svg>

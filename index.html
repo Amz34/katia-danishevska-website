@@ -1,243 +1,193 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Katia Danishevska — Strategic Talent Partner</title>
-  <meta name="description" content="Strategic Talent Partner specializing in Digital Assets, FinTech, and Executive Search across global markets. Based in Zürich Metropolitan Area.">
-  <meta property="og:title" content="Katia Danishevska — Strategic Talent Partner">
-  <meta property="og:description" content="Connecting exceptional leaders with transformative opportunities in Digital Assets, FinTech, and Financial Services.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Fonts: Geist -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.min.css">
-
-  <!-- Icons: Phosphor -->
-  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-
-  <!-- Tailwind CSS CDN (production would use build) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="color-scheme" content="light dark">
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Geist', 'system-ui', 'sans-serif'],
-          },
-          colors: {
-            surface: {
-              0: '#000000',
-              50: '#131209',
-              100: '#181818',
-              200: '#1F1F1F',
-              300: '#272727',
-              400: '#313131',
-            },
-            accent: {
-              DEFAULT: '#3B82F6',
-              light: '#60A5FA',
-              subtle: '#1E3A5F',
-            },
-            teal: {
-              DEFAULT: '#14B8A6',
-              light: '#2DD4BF',
-            }
-          },
-          transitionTimingFunction: {
-            'smooth': 'cubic-bezier(0.22, 1, 0.36, 1)',
-          },
-        }
+    try {
+      var s = localStorage.getItem('color-scheme');
+      if (s === 'dark' || s === 'light') {
+        document.querySelector('meta[name="color-scheme"]').content = s;
+        document.documentElement.setAttribute('data-theme', s);
       }
-    }
+    } catch (e) {}
   </script>
 
+  <title>Katia Danishevska | Strategic Talent Partner</title>
+  <meta name="description" content="Strategic Talent Partner specializing in Digital Assets, FinTech, and Executive Search across Switzerland, Europe, and global markets.">
+  <link rel="canonical" href="https://katia-danishevska.pages.dev/">
+
+  <!-- WhatsApp, LinkedIn & Social Link Preview with Official KD Monogram -->
+  <meta property="og:site_name" content="Katia Danishevska">
+  <meta property="og:title" content="Katia Danishevska | Strategic Talent Partner">
+  <meta property="og:description" content="Strategic Talent Partner in Digital Assets, FinTech, and Executive Search. Around 10 years connecting specialist and executive leaders across global markets.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://katia-danishevska.pages.dev/">
+  <meta property="og:image" content="https://katia-danishevska.pages.dev/assets/og-card.jpg">
+  <meta property="og:image:secure_url" content="https://katia-danishevska.pages.dev/assets/og-card.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image" content="https://katia-danishevska.pages.dev/assets/kd-logo-square.jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="600">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Katia Danishevska | Strategic Talent Partner">
+  <meta name="twitter:description" content="Digital Assets, FinTech & Executive Search across Switzerland and international markets.">
+  <meta name="twitter:image" content="https://katia-danishevska.pages.dev/assets/og-card.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Typography: Geist & Geist Mono -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.min.css">
+
   <link rel="stylesheet" href="css/main.css">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24' font-family='Geist,sans-serif' font-weight='600' fill='%233B82F6'>K</text></svg>">
-
-  <!-- Skip to content -->
-  <style>
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: #3B82F6;
-      color: white;
-      padding: 8px 16px;
-      z-index: 100;
-      transition: top 0.3s;
-    }
-    .skip-link:focus {
-      top: 0;
-    }
-  </style>
 </head>
-<body class="font-sans antialiased bg-white text-neutral-900 dark:bg-surface-0 dark:text-white transition-colors duration-500 ease-smooth">
-  <a href="#main" class="skip-link">Skip to content</a>
+<body>
+  <a href="#main" class="skip-link button-sm">Skip to content</a>
+  <div id="scroll-progress-bar" class="scroll-progress-bar" aria-hidden="true"></div>
+  <div id="nav-sentinel" class="nav-sentinel" aria-hidden="true"></div>
 
-  <!-- ═══════════════════════════════════════ -->
-  <!-- NAVIGATION                              -->
-  <!-- ═══════════════════════════════════════ -->
-  <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 px-6 py-3 rounded-2xl backdrop-blur-xl bg-white/80 dark:bg-surface-100/80 border border-neutral-200/50 dark:border-surface-400/50 shadow-lg shadow-black/5 dark:shadow-black/20 transition-all duration-500 ease-smooth">
-    <div class="flex items-center gap-8">
-      <!-- Logo -->
-      <a href="#hero" class="flex items-center gap-2 group">
-        <span class="text-xl font-semibold text-neutral-900 dark:text-white group-hover:text-accent transition-colors duration-300">KD</span>
+  <!-- Floating Translucent Header -->
+  <header class="site-nav-wrap">
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="index.html" class="brand-mark" aria-label="Katia Danishevska Home">
+        <span class="brand-badge" aria-hidden="true">KD</span>
+        <span class="title-4">Katia Danishevska</span>
       </a>
 
-      <!-- Desktop Links -->
-      <div class="hidden md:flex items-center gap-6">
-        <a href="#about" class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">About</a>
-        <a href="#expertise" class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">Expertise</a>
-        <a href="#journey" class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">Journey</a>
-        <a href="#approach" class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">Approach</a>
-        <a href="#contact" class="nav-link text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-300">Contact</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link title-4" aria-current="page">Overview</a></li>
+        <li><a href="experience.html" class="nav-link title-4">Experience</a></li>
+        <li><a href="mandates.html" class="nav-link title-4">Mandates</a></li>
+        <li><a href="#atlas" class="nav-link title-4">Corridor</a></li>
+        <li><a href="#connect" class="nav-link title-4">Connect</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" type="button" class="icon-btn" aria-label="Toggle color theme" aria-pressed="false">
+          <span class="icon-crossfade" aria-hidden="true">
+            <span class="theme-icon-sun">
+              <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><circle cx="128" cy="128" r="48"/><path d="M128 36v-12M128 232v-12M63 63l-9-9M202 202l-9-9M36 128H24M232 128h-12M63 193l-9 9M202 54l-9 9"/></svg>
+            </span>
+            <span class="theme-icon-moon">
+              <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M210.7 152.6A92 92 0 0 1 103.4 45.3a92 92 0 1 0 107.3 107.3Z"/></svg>
+            </span>
+          </span>
+        </button>
+
+        <button id="menu-toggle" type="button" class="icon-btn menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="hamburger-lines" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
       </div>
+    </nav>
+  </header>
 
-      <!-- Theme Toggle -->
-      <button id="theme-toggle" class="p-2 rounded-xl bg-neutral-100 dark:bg-surface-300 hover:bg-neutral-200 dark:hover:bg-surface-400 transition-all duration-300 ease-smooth active:scale-95" aria-label="Toggle theme">
-        <i class="ph ph-sun text-lg dark:hidden"></i>
-        <i class="ph ph-moon text-lg hidden dark:block"></i>
-      </button>
+  <!-- Full-Height Mobile Navigation Panel -->
+  <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile menu" aria-hidden="true">
+    <a href="index.html" class="mobile-drawer-link heading-5"><span>Overview</span><span class="mono-meta caption-4 text-muted">01</span></a>
+    <a href="experience.html" class="mobile-drawer-link heading-5"><span>Experience</span><span class="mono-meta caption-4 text-muted">02</span></a>
+    <a href="mandates.html" class="mobile-drawer-link heading-5"><span>Mandates</span><span class="mono-meta caption-4 text-muted">03</span></a>
+    <a href="#atlas" class="mobile-drawer-link heading-5"><span>Corridor Atlas</span><span class="mono-meta caption-4 text-muted">04</span></a>
+    <a href="#connect" class="mobile-drawer-link heading-5"><span>Connect</span><span class="mono-meta caption-4 text-muted">05</span></a>
+  </aside>
 
-      <!-- Mobile Menu Toggle -->
-      <button id="menu-toggle" class="md:hidden p-2 rounded-xl bg-neutral-100 dark:bg-surface-300 hover:bg-neutral-200 dark:hover:bg-surface-400 transition-all duration-300 ease-smooth" aria-label="Toggle menu" aria-expanded="false">
-        <i class="ph ph-list text-lg menu-icon transition-transform duration-500 ease-smooth"></i>
-      </button>
-    </div>
-  </nav>
+  <main id="main" tabindex="-1">
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="fixed inset-0 z-40 bg-white/95 dark:bg-surface-0/95 backdrop-blur-2xl flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-500 ease-smooth">
-    <a href="#about" class="mobile-link text-2xl font-semibold text-neutral-900 dark:text-white opacity-0 translate-y-6">About</a>
-    <a href="#expertise" class="mobile-link text-2xl font-semibold text-neutral-900 dark:text-white opacity-0 translate-y-6">Expertise</a>
-    <a href="#journey" class="mobile-link text-2xl font-semibold text-neutral-900 dark:text-white opacity-0 translate-y-6">Journey</a>
-    <a href="#approach" class="mobile-link text-2xl font-semibold text-neutral-900 dark:text-white opacity-0 translate-y-6">Approach</a>
-    <a href="#contact" class="mobile-link text-2xl font-semibold text-neutral-900 dark:text-white opacity-0 translate-y-6">Contact</a>
-  </div>
+    <!-- 1. HERO: ASYMMETRIC SPLIT + BESPOKE TOPOLOGICAL CANVAS -->
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas id="flux-canvas" class="flux-canvas" aria-hidden="true"></canvas>
 
-  <main id="main">
-
-    <!-- ═══════════════════════════════════════ -->
-    <!-- HERO SECTION                            -->
-    <!-- ═══════════════════════════════════════ -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <!-- Subtle background pattern -->
-      <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0); background-size: 40px 40px;"></div>
-      </div>
-
-      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <!-- Greeting capsule -->
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 dark:bg-accent/15 border border-accent/20 mb-8 animate-fade-in">
-          <span class="w-2 h-2 rounded-full bg-teal animate-pulse"></span>
-          <span class="text-sm font-medium text-accent dark:text-accent-light">Open to collaborations</span>
-        </div>
-
-        <!-- Hero heading with gradient -->
-        <h1 class="text-5xl md:text-6xl font-semibold leading-tight mb-6" style="max-width: 680px; margin-left: auto; margin-right: auto;">
-          <span class="hero-gradient">Connecting leaders with<br>transformative opportunities</span>
-        </h1>
-
-        <p class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 mb-10 max-w-xl mx-auto" style="text-wrap: pretty;">
-          Strategic Talent Partner specializing in Digital Assets, FinTech, and Executive Search across global markets.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#contact" class="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-semibold text-base hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 ease-smooth shadow-lg shadow-neutral-900/20 dark:shadow-white/10">
-            Get in touch
-            <i class="ph ph-arrow-right text-lg group-hover:translate-x-1 transition-transform duration-300 ease-smooth"></i>
-          </a>
-          <a href="#about" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-neutral-300 dark:border-surface-400 text-neutral-700 dark:text-neutral-300 font-semibold text-base hover:bg-neutral-50 dark:hover:bg-surface-200 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 ease-smooth">
-            Learn more
-          </a>
-        </div>
-
-        <!-- Quick stats -->
-        <div class="mt-16 flex flex-wrap items-center justify-center gap-8 md:gap-12">
-          <div class="text-center">
-            <p class="text-3xl md:text-4xl font-semibold text-neutral-900 dark:text-white">10+</p>
-            <p class="text-sm text-neutral-500 dark:text-neutral-500 mt-1">Years in talent</p>
-          </div>
-          <div class="w-px h-10 bg-neutral-200 dark:bg-surface-400"></div>
-          <div class="text-center">
-            <p class="text-3xl md:text-4xl font-semibold text-neutral-900 dark:text-white">3</p>
-            <p class="text-sm text-neutral-500 dark:text-neutral-500 mt-1">Countries</p>
-          </div>
-          <div class="w-px h-10 bg-neutral-200 dark:bg-surface-400"></div>
-          <div class="text-center">
-            <p class="text-3xl md:text-4xl font-semibold text-neutral-900 dark:text-white">FinTech</p>
-            <p class="text-sm text-neutral-500 dark:text-neutral-500 mt-1">Digital Assets</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Scroll indicator -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce-slow">
-        <span class="text-xs font-medium text-neutral-500">Scroll</span>
-        <i class="ph ph-caret-down text-sm"></i>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════ -->
-    <!-- TAGLINE REVEAL (B11 Mandatory)          -->
-    <!-- ═══════════════════════════════════════ -->
-    <section class="py-24 md:py-32 px-6">
-      <div class="max-w-3xl mx-auto">
-        <p id="tagline-reveal" class="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight" style="max-width: 680px; text-wrap: balance;">
-          Building bridges between exceptional talent and the companies shaping the future of finance.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════ -->
-    <!-- ABOUT SECTION                           -->
-    <!-- ═══════════════════════════════════════ -->
-    <section id="about" class="py-24 md:py-32 px-6 reveal-section">
-      <div class="max-w-5xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <!-- Text Side -->
-          <div>
-            <span class="text-sm font-medium text-accent dark:text-accent-light mb-4 block">About</span>
-            <h2 class="text-4xl md:text-5xl font-semibold mb-6" style="text-wrap: balance;">
-              A decade of connecting the right people
-            </h2>
-            <div class="space-y-4 text-neutral-600 dark:text-neutral-400">
-              <p class="text-base" style="text-wrap: pretty;">
-                I am a talent acquisition professional with around 10 years of experience supporting recruitment across financial services, technology, and digital assets.
-              </p>
-              <p class="text-base" style="text-wrap: pretty;">
-                Throughout my career, I have worked with different teams and business environments across Europe and international markets, including valuable professional experience in Switzerland. These experiences have shaped a broader understanding of talent markets, cross-cultural collaboration, and the challenges of hiring for growing businesses.
-              </p>
-              <p class="text-base" style="text-wrap: pretty;">
-                My focus is on connecting companies with the right people, from experienced specialists and managers to senior leaders across fintech, blockchain, and digital asset businesses.
-              </p>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="hero-role-line hero-stagger hero-stagger-1">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span class="caption-1">Strategic Talent Partner · Zürich Area</span>
             </div>
+
+            <h1 id="hero-title" class="heading-1 hero-gradient-text hero-stagger hero-stagger-2">
+              Executive talent<br>
+              for digital assets<br>
+              and modern finance
+            </h1>
+
+            <p class="body-2 hero-sub hero-stagger hero-stagger-3">
+              Around ten years of dedicated talent acquisition across digital assets, financial technology, and leadership hiring throughout Switzerland, Europe, and global markets.
+            </p>
+
+            <div class="hero-actions hero-stagger hero-stagger-4">
+              <a href="https://www.linkedin.com/in/katia-danishevska-122224445" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-with-icon button-md">
+                <span>Connect on LinkedIn</span>
+                <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M40 128h176M144 56l72 72-72 72"/></svg>
+              </a>
+              <a href="experience.html" class="btn btn-secondary button-md">View Career Dossier</a>
+            </div>
+
+            <dl class="hero-proof-strip hero-stagger hero-stagger-5">
+              <div>
+                <dt class="caption-4 text-muted">Experience</dt>
+                <dd class="title-2 tabular-nums mt-1">~10 Years</dd>
+              </div>
+              <div>
+                <dt class="caption-4 text-muted">Current Mandate</dt>
+                <dd class="title-2 mt-1">SwissChain</dd>
+              </div>
+              <div>
+                <dt class="caption-4 text-muted">Swiss Banking Tenure</dt>
+                <dd class="title-2 tabular-nums mt-1">5 yrs 10 mos</dd>
+              </div>
+            </dl>
           </div>
 
-          <!-- Visual Side -->
-          <div class="relative">
-            <div class="aspect-[4/5] rounded-2xl bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-surface-200 dark:to-surface-300 overflow-hidden border border-neutral-200/50 dark:border-surface-400/50">
-              <!-- Abstract geometric composition instead of AI image -->
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="relative w-48 h-48">
-                  <div class="absolute inset-0 rounded-full border-2 border-accent/30 animate-spin-slow"></div>
-                  <div class="absolute inset-4 rounded-full border-2 border-teal/30 animate-spin-slow-reverse"></div>
-                  <div class="absolute inset-8 rounded-full bg-accent/10 dark:bg-accent/20 flex items-center justify-center">
-                    <span class="text-5xl font-semibold text-accent/60 dark:text-accent-light/60">KD</span>
-                  </div>
+          <!-- Editorial Monogram Dossier Panel -->
+          <div class="dossier-frame hero-stagger hero-stagger-4" aria-label="Executive profile summary">
+            <div class="dossier-inner">
+              <div class="dossier-top">
+                <div class="dossier-monogram" aria-hidden="true">KD</div>
+                <div style="text-align: right;">
+                  <div class="mono-meta caption-4 text-teal">ZÜRICH · LJUBLJANA</div>
+                  <div class="mono-meta caption-5 text-muted mt-1">47.3769° N · 8.5417° E</div>
                 </div>
               </div>
-              <!-- Location tag -->
-              <div class="absolute bottom-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/90 dark:bg-surface-100/90 backdrop-blur-sm border border-neutral-200/50 dark:border-surface-400/50">
-                <i class="ph ph-map-pin text-sm text-accent"></i>
-                <span class="text-xs font-medium">Zürich Metropolitan Area</span>
+
+              <div>
+                <div class="title-2">Katia Danishevska</div>
+                <p class="body-6 text-secondary mt-1">
+                  Senior Talent Acquisition Partner across Digital Assets, FinTech, and Executive Hiring.
+                </p>
+              </div>
+
+              <div class="dossier-list">
+                <div class="dossier-row">
+                  <span class="caption-4 text-muted">Present</span>
+                  <span class="body-5">SwissChain · Ljubljana</span>
+                </div>
+                <div class="dossier-row">
+                  <span class="caption-4 text-muted">2020 to 2025</span>
+                  <span class="body-5">AMINA Bank · Zug</span>
+                </div>
+                <div class="dossier-row">
+                  <span class="caption-4 text-muted">2018 to 2019</span>
+                  <span class="body-5">ManpowerGroup · IT</span>
+                </div>
+                <div class="dossier-row">
+                  <span class="caption-4 text-muted">Education</span>
+                  <span class="body-5">MSc HRM · Ljubljana</span>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+                <span class="caption-4 text-secondary">Core Specialties</span>
+                <span class="caption-3">Sourcing · Executive Search</span>
               </div>
             </div>
           </div>
@@ -245,286 +195,421 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════ -->
-    <!-- EXPERTISE SECTION                       -->
-    <!-- ═══════════════════════════════════════ -->
-    <section id="expertise" class="py-24 md:py-32 px-6 bg-neutral-50 dark:bg-surface-50 reveal-section">
-      <div class="max-w-5xl mx-auto">
-        <span class="text-sm font-medium text-accent dark:text-accent-light mb-4 block">Expertise</span>
-        <h2 class="text-4xl md:text-5xl font-semibold mb-4" style="text-wrap: balance;">
-          Where talent meets opportunity
-        </h2>
-        <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl" style="text-wrap: pretty;">
-          Specialized knowledge across the most dynamic sectors of modern finance and technology.
+    <!-- 2. MANDATORY TAGLINE REVEAL (B11) -->
+    <section class="tagline-section section-band" aria-label="Guiding principle">
+      <div class="container">
+        <p id="tagline-reveal" class="heading-2 tagline-text">
+          Executive search works best when every brief starts with genuine business context, thoughtful evaluation, and lasting trust between leaders and candidates.
         </p>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Card 1 -->
-          <div class="group p-6 rounded-2xl bg-white dark:bg-surface-200 border border-neutral-200/50 dark:border-surface-400/50 hover:border-accent/30 dark:hover:border-accent/30 transition-all duration-500 ease-smooth hover:-translate-y-1">
-            <div class="w-12 h-12 rounded-xl bg-accent/10 dark:bg-accent/15 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 ease-smooth">
-              <i class="ph ph-coin-vertical text-2xl text-accent dark:text-accent-light"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Digital Assets</h3>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400" style="text-wrap: pretty;">
-              Recruiting across blockchain, cryptocurrency, DeFi, and Web3 ecosystems for companies building the infrastructure of digital finance.
-            </p>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="group p-6 rounded-2xl bg-white dark:bg-surface-200 border border-neutral-200/50 dark:border-surface-400/50 hover:border-teal/30 dark:hover:border-teal/30 transition-all duration-500 ease-smooth hover:-translate-y-1">
-            <div class="w-12 h-12 rounded-xl bg-teal/10 dark:bg-teal/15 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 ease-smooth">
-              <i class="ph ph-chart-line-up text-2xl text-teal dark:text-teal-light"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">FinTech</h3>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400" style="text-wrap: pretty;">
-              Placing specialists and leaders in financial technology firms from Series A startups to established institutions embracing innovation.
-            </p>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="group p-6 rounded-2xl bg-white dark:bg-surface-200 border border-neutral-200/50 dark:border-surface-400/50 hover:border-purple-500/30 transition-all duration-500 ease-smooth hover:-translate-y-1">
-            <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 ease-smooth">
-              <i class="ph ph-users-three text-2xl text-purple-500"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Executive Search</h3>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400" style="text-wrap: pretty;">
-              Identifying and securing C-suite executives, department heads, and senior leaders who drive organizational transformation.
-            </p>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="group p-6 rounded-2xl bg-white dark:bg-surface-200 border border-neutral-200/50 dark:border-surface-400/50 hover:border-amber-500/30 transition-all duration-500 ease-smooth hover:-translate-y-1">
-            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 ease-smooth">
-              <i class="ph ph-globe text-2xl text-amber-500"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Global Markets</h3>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400" style="text-wrap: pretty;">
-              Cross-border talent acquisition across Europe and international markets, with deep experience in the Swiss financial hub.
-            </p>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="group p-6 rounded-2xl bg-white dark:bg-surface-200 border border-neutral-200/50 dark:border-surface-400/50 hover:border-rose-500/30 transition-all duration-500 ease-smooth hover:-translate-y-1">
-            <div class="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 ease-smooth">
-              <i class="ph ph-bank text-2xl text-rose-500"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Financial Services</h3>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400" style="text-wrap: pretty;">
-              Building teams across banking, compliance, operations, and finance for institutions navigating the intersection of traditional and digital finance.
-            </p>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="group p-6 rounded-2xl bg-white dark:bg-surface-200 border border-neutral-200/50 dark:border-surface-400/50 hover:border-cyan-500/30 transition-all duration-500 ease-smooth hover:-translate-y-1">
-            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 ease-smooth">
-              <i class="ph ph-handshake text-2xl text-cyan-500"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Strategic Sourcing</h3>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400" style="text-wrap: pretty;">
-              Developing targeted talent pipelines and long-term sourcing strategies that go beyond the job board.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════ -->
-    <!-- JOURNEY / EXPERIENCE SECTION            -->
-    <!-- ═══════════════════════════════════════ -->
-    <section id="journey" class="py-24 md:py-32 px-6 reveal-section">
-      <div class="max-w-4xl mx-auto">
-        <span class="text-sm font-medium text-accent dark:text-accent-light mb-4 block">Journey</span>
-        <h2 class="text-4xl md:text-5xl font-semibold mb-12" style="text-wrap: balance;">
-          Building expertise across borders
-        </h2>
+    <!-- 3. EXECUTIVE PROFILE & PERSPECTIVE -->
+    <section id="about" class="section reveal-block" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="grid-asymmetric">
+          <div>
+            <span class="caption-3 text-teal">Perspective</span>
+            <h2 id="about-heading" class="heading-3 mt-1">
+              Grounded in European markets and Swiss regulated finance
+            </h2>
+            <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 24px;" class="text-secondary">
+              <p class="body-3">
+                Throughout my career across Switzerland, Slovenia, and wider international markets, I have partnered closely with founders, functional heads, and hiring managers navigating complex talent landscapes.
+              </p>
+              <p class="body-3">
+                Working inside regulated Swiss digital asset banking at AMINA Bank and now at SwissChain has shaped how I calibrate mandates: precision over volume, multicultural fluency, and genuine relationships with senior specialists.
+              </p>
+              <p class="body-3">
+                Whether building foundational engineering and compliance teams or placing department leadership, every mandate balances immediate operational priorities with sustainable team architecture.
+              </p>
+            </div>
+            <div class="mt-4">
+              <a href="mandates.html" class="btn btn-secondary btn-with-icon button-sm">
+                <span>Explore Mandate Scope</span>
+                <svg width="16" height="16" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M40 128h176M144 56l72 72-72 72"/></svg>
+              </a>
+            </div>
+          </div>
 
-        <!-- Timeline -->
-        <div class="relative">
-          <!-- Timeline line -->
-          <div class="absolute left-4 md:left-6 top-0 bottom-0 w-px bg-neutral-200 dark:bg-surface-400"></div>
-
-          <!-- SwissChain -->
-          <div class="relative pl-12 md:pl-16 pb-12 timeline-item">
-            <div class="absolute left-2 md:left-4 w-4 h-4 rounded-full bg-accent border-4 border-white dark:border-surface-0 shadow-sm"></div>
-            <div class="p-6 rounded-2xl bg-neutral-50 dark:bg-surface-200 border border-neutral-200/50 dark:border-surface-400/50">
-              <div class="flex flex-wrap items-center gap-3 mb-3">
-                <span class="px-3 py-1 rounded-full bg-accent/10 text-accent dark:text-accent-light text-xs font-semibold">Current</span>
-                <span class="text-xs text-neutral-500">Oct 2025 — Present</span>
+          <div class="grid-2" style="gap: 16px;">
+            <article class="card card-interactive">
+              <div class="card-icon-box" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><circle cx="128" cy="128" r="88"/><path d="M128 40v176M40 128h176"/></svg>
               </div>
-              <h3 class="text-xl font-semibold mb-1">Senior Talent Acquisition Partner</h3>
-              <p class="text-sm font-medium text-accent dark:text-accent-light mb-3">SwissChain · Ljubljana, Slovenia</p>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400" style="text-wrap: pretty;">
-                Partnering with business leaders to identify and recruit experienced professionals across digital assets, fintech, and financial services. Managing end-to-end recruitment for senior, specialist, and leadership positions.
+              <h3 class="title-2">Digital Assets</h3>
+              <p class="body-6 text-secondary mt-1">
+                Specialist and executive hiring for blockchain infrastructure, custody, and regulated digital finance.
               </p>
-            </div>
-          </div>
+            </article>
 
-          <!-- AMINA Bank -->
-          <div class="relative pl-12 md:pl-16 pb-12 timeline-item">
-            <div class="absolute left-2 md:left-4 w-4 h-4 rounded-full bg-teal border-4 border-white dark:border-surface-0 shadow-sm"></div>
-            <div class="p-6 rounded-2xl bg-neutral-50 dark:bg-surface-200 border border-neutral-200/50 dark:border-surface-400/50">
-              <span class="text-xs text-neutral-500">Jan 2020 — Oct 2025 · 5 years 10 months</span>
-              <h3 class="text-xl font-semibold mt-2 mb-1">Talent Acquisition Partner → Senior Partner</h3>
-              <p class="text-sm font-medium text-teal mb-3">AMINA Bank · Zug, Switzerland</p>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400" style="text-wrap: pretty;">
-                Progressive growth from Specialist to Senior Partner. Partnered with hiring managers to define priorities, developed targeted talent pipelines across digital assets and institutional financial services, and managed recruitment for department heads and leadership roles.
+            <article class="card card-interactive">
+              <div class="card-icon-box" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M32 208h192M56 168l48-48 36 36 60-76"/></svg>
+              </div>
+              <h3 class="title-2">FinTech Growth</h3>
+              <p class="body-6 text-secondary mt-1">
+                Scaling product, technology, and commercial teams as regulated platforms expand into new regions.
               </p>
-            </div>
-          </div>
+            </article>
 
-          <!-- ManpowerGroup -->
-          <div class="relative pl-12 md:pl-16 pb-12 timeline-item">
-            <div class="absolute left-2 md:left-4 w-4 h-4 rounded-full bg-purple-500 border-4 border-white dark:border-surface-0 shadow-sm"></div>
-            <div class="p-6 rounded-2xl bg-neutral-50 dark:bg-surface-200 border border-neutral-200/50 dark:border-surface-400/50">
-              <span class="text-xs text-neutral-500">Jan 2018 — Dec 2019 · 2 years</span>
-              <h3 class="text-xl font-semibold mt-2 mb-1">Recruitment Consultant</h3>
-              <p class="text-sm font-medium text-purple-500 mb-3">ManpowerGroup · Ljubljana, Slovenia</p>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400" style="text-wrap: pretty;">
-                Focused on IT and technology recruitment, building relationships with candidates and hiring managers. Developed experience in technology talent markets and direct candidate sourcing.
+            <article class="card card-interactive">
+              <div class="card-icon-box" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><circle cx="128" cy="88" r="36"/><path d="M64 208a64 64 0 0 1 128 0"/></svg>
+              </div>
+              <h3 class="title-2">Executive Search</h3>
+              <p class="body-6 text-secondary mt-1">
+                Targeted outreach, calibrated evaluation, and thoughtful offer advisory for senior leadership mandates.
               </p>
-            </div>
-          </div>
+            </article>
 
-          <!-- ISG + Adecco -->
-          <div class="relative pl-12 md:pl-16 timeline-item">
-            <div class="absolute left-2 md:left-4 w-4 h-4 rounded-full bg-neutral-400 border-4 border-white dark:border-surface-0 shadow-sm"></div>
-            <div class="p-6 rounded-2xl bg-neutral-50 dark:bg-surface-200 border border-neutral-200/50 dark:border-surface-400/50">
-              <span class="text-xs text-neutral-500">Jun 2014 — Dec 2017 · 3 years</span>
-              <h3 class="text-xl font-semibold mt-2 mb-1">Recruitment Foundations</h3>
-              <p class="text-sm font-medium text-neutral-500 mb-3">ISG International · Adecco Slovenia</p>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400" style="text-wrap: pretty;">
-                Built core recruitment expertise through sourcing, screening, and client communication across multiple industries. Supported assignments from initial search through candidate selection.
+            <article class="card card-interactive">
+              <div class="card-icon-box" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M40 96h176v96a16 16 0 0 1-16 16H56a16 16 0 0 1-16-16V96ZM88 96V64a16 16 0 0 1 16-16h48a16 16 0 0 1 16 16v32"/></svg>
+              </div>
+              <h3 class="title-2">Banking &amp; Compliance</h3>
+              <p class="body-6 text-secondary mt-1">
+                Building operations, risk, finance, and governance capabilities across institutional environments.
               </p>
-            </div>
+            </article>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Education -->
-        <div class="mt-12 p-6 rounded-2xl bg-neutral-50 dark:bg-surface-200 border border-neutral-200/50 dark:border-surface-400/50 reveal-section">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
-              <i class="ph ph-graduation-cap text-2xl text-accent"></i>
+    <!-- 4. INTERACTIVE CORRIDOR ATLAS CANVAS -->
+    <section id="atlas" class="section section-band reveal-block" aria-labelledby="atlas-heading">
+      <div class="container">
+        <div style="max-width: 680px; margin-bottom: 32px;">
+          <span class="caption-3 text-teal">Interactive Market Atlas</span>
+          <h2 id="atlas-heading" class="heading-3 mt-1">
+            Ten years across Swiss and European talent hubs
+          </h2>
+          <p class="body-3 text-secondary mt-2">
+            Select any milestone or domain node directly on the canvas to inspect role scope, market geography, and verified tenure.
+          </p>
+        </div>
+
+        <div class="atlas-shell">
+          <div class="atlas-toolbar">
+            <div class="segmented" role="group" aria-label="Atlas view mode">
+              <button type="button" class="segmented-btn button-sm" data-atlas-mode="CORRIDOR" aria-pressed="true">Career Corridor</button>
+              <button type="button" class="segmented-btn button-sm" data-atlas-mode="MANDATES" aria-pressed="false">Mandate Functions</button>
             </div>
-            <div>
-              <h3 class="text-lg font-semibold">Master's Degree in Human Resource Management</h3>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">University of Ljubljana · 2012 — 2014</p>
+            <span class="mono-meta caption-4 text-muted">Click or hover nodes</span>
+          </div>
+
+          <div class="corridor-canvas-box">
+            <canvas id="corridor-canvas" aria-label="Interactive canvas map of Katia Danishevska career hubs and search domains"></canvas>
+          </div>
+
+          <div class="atlas-readout">
+            <div id="atlas-active-title" class="title-1">SwissChain · 2025 to Present</div>
+            <div id="atlas-active-meta" class="mono-meta caption-2 text-teal">Senior Talent Acquisition Partner · Ljubljana · Digital Assets &amp; FinTech</div>
+            <p id="atlas-active-desc" class="body-5 text-secondary">
+              Partners with business leaders to recruit senior specialists and leadership across technology, compliance, operations, finance, and business development.
+            </p>
+            <div id="atlas-hub-chips" class="hub-chips" role="group" aria-label="Select milestone node"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CAREER HIGHLIGHTS + LINK TO FULL DOSSIER -->
+    <section class="section reveal-block" aria-labelledby="journey-heading">
+      <div class="container">
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 40px;">
+          <div style="max-width: 640px;">
+            <span class="caption-3 text-teal">Career Progression</span>
+            <h2 id="journey-heading" class="heading-3 mt-1">
+              Consistent growth from specialist sourcing to executive leadership search
+            </h2>
+          </div>
+          <a href="experience.html" class="btn btn-secondary btn-with-icon button-sm">
+            <span>Full Career Timeline</span>
+            <svg width="16" height="16" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M40 128h176M144 56l72 72-72 72"/></svg>
+          </a>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline-entry is-current">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="card">
+              <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;">
+                <div>
+                  <h3 class="title-1">Senior Talent Acquisition Partner</h3>
+                  <p class="body-5 text-teal mt-1">SwissChain · Ljubljana, Slovenia</p>
+                </div>
+                <span class="mono-meta caption-2 text-muted">October 2025 to Present</span>
+              </div>
+              <p class="body-5 text-secondary mt-2">
+                Leading full cycle recruitment for senior specialists, business leaders, and core functions across digital assets, fintech, technology, compliance, operations, and finance.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-entry">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="card">
+              <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;">
+                <div>
+                  <h3 class="title-1">Talent Acquisition Partner · Digital Assets &amp; Executive Hiring</h3>
+                  <p class="body-5 text-accent mt-1">AMINA Bank · Zug, Switzerland</p>
+                </div>
+                <span class="mono-meta caption-2 text-muted">January 2020 to October 2025</span>
+              </div>
+              <p class="body-5 text-secondary mt-2">
+                Spent five years and ten months growing across three successive roles at AMINA Bank, hiring department heads, senior specialists, and institutional banking talent across international markets.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-entry">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="card">
+              <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;">
+                <div>
+                  <h3 class="title-1">IT Recruitment &amp; Advisory Foundations</h3>
+                  <p class="body-5 text-secondary mt-1">ManpowerGroup · ISG International · Adecco Slovenia</p>
+                </div>
+                <span class="mono-meta caption-2 text-muted">June 2014 to December 2019</span>
+              </div>
+              <p class="body-5 text-secondary mt-2">
+                Built core technical sourcing and consultative client capabilities across IT, engineering, and management placements following a Master Degree in Human Resource Management at the University of Ljubljana.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 6. SPLIT ACCORDION: COLLABORATION & SEARCH METHODOLOGY -->
+    <section class="section section-band reveal-block" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="grid-asymmetric">
+          <div>
+            <span class="caption-3 text-teal">How We Collaborate</span>
+            <h2 id="faq-heading" class="heading-3 mt-1">
+              Clear alignment from first intake to offer close
+            </h2>
+            <p class="body-3 text-secondary mt-2">
+              Every search prioritizes honest market calibration, direct candidate relationships, and structured communication with hiring managers.
+            </p>
+          </div>
+
+          <div class="split-accordion" role="region" aria-label="Search methodology details">
+            <div class="split-acc-item is-open">
+              <h3>
+                <button type="button" class="split-acc-trigger title-2" aria-expanded="true">
+                  <span>01 · Business calibration before sourcing begins</span>
+                  <svg class="split-acc-chevron" width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M48 96l80 80 80-80"/></svg>
+                </button>
+              </h3>
+              <div class="split-acc-panel">
+                <div class="split-acc-inner">
+                  <p class="split-acc-content body-5">
+                    Partnering directly with hiring managers and leadership to align on real business outcomes, team dynamics, compensation bands, and realistic market availability across regions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="split-acc-item">
+              <h3>
+                <button type="button" class="split-acc-trigger title-2" aria-expanded="false">
+                  <span>02 · Direct sourcing and international talent pipelines</span>
+                  <svg class="split-acc-chevron" width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M48 96l80 80 80-80"/></svg>
+                </button>
+              </h3>
+              <div class="split-acc-panel">
+                <div class="split-acc-inner">
+                  <p class="split-acc-content body-5">
+                    Proactive outreach through trusted industry networks across Switzerland, Europe, and global digital asset hubs rather than waiting on passive job board applications.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="split-acc-item">
+              <h3>
+                <button type="button" class="split-acc-trigger title-2" aria-expanded="false">
+                  <span>03 · Structured evaluation and offer stewardship</span>
+                  <svg class="split-acc-chevron" width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M48 96l80 80 80-80"/></svg>
+                </button>
+              </h3>
+              <div class="split-acc-panel">
+                <div class="split-acc-inner">
+                  <p class="split-acc-content body-5">
+                    Coordinating thoughtful interview stages, transparent stakeholder feedback, and careful offer negotiations that protect both candidate experience and company goals.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="split-acc-item">
+              <h3>
+                <button type="button" class="split-acc-trigger title-2" aria-expanded="false">
+                  <span>04 · Functions covered across regulated fintech</span>
+                  <svg class="split-acc-chevron" width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M48 96l80 80 80-80"/></svg>
+                </button>
+              </h3>
+              <div class="split-acc-panel">
+                <div class="split-acc-inner">
+                  <p class="split-acc-content body-5">
+                    Senior specialists, department heads, and leadership mandates spanning engineering, blockchain technology, compliance, operations, finance, and business development.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════ -->
-    <!-- APPROACH / HOW I WORK                   -->
-    <!-- ═══════════════════════════════════════ -->
-    <section id="approach" class="py-24 md:py-32 px-6 bg-neutral-50 dark:bg-surface-50 reveal-section">
-      <div class="max-w-5xl mx-auto">
-        <span class="text-sm font-medium text-accent dark:text-accent-light mb-4 block">Approach</span>
-        <h2 class="text-4xl md:text-5xl font-semibold mb-4" style="text-wrap: balance;">
-          How I work with you
-        </h2>
-        <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl" style="text-wrap: pretty;">
-          Every search starts with understanding your business deeply, not just the job description.
-        </p>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Step 1 -->
-          <div class="relative">
-            <div class="text-6xl font-semibold text-neutral-100 dark:text-surface-300 mb-4">01</div>
-            <h3 class="text-xl font-semibold mb-3">Understand</h3>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400" style="text-wrap: pretty;">
-              Deep dive into your business needs, team culture, and what success looks like for the role. No generic briefs.
+    <!-- 7. DIRECT CONNECT & VALIDATED INQUIRY -->
+    <section id="connect" class="section reveal-block" aria-labelledby="connect-heading">
+      <div class="container">
+        <div class="grid-asymmetric">
+          <div>
+            <span class="caption-3 text-teal">Direct Contact</span>
+            <h2 id="connect-heading" class="heading-2 mt-1">
+              Start a conversation
+            </h2>
+            <p class="body-3 text-secondary mt-2" style="max-width: 520px;">
+              Open to conversations with founders, hiring managers, and senior professionals across European and international time zones.
             </p>
+
+            <div class="hero-actions mt-4">
+              <a href="https://www.linkedin.com/in/katia-danishevska-122224445" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-with-icon button-md">
+                <span>Message on LinkedIn</span>
+                <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M180 76L76 180M96 76h84v84"/></svg>
+              </a>
+
+              <button id="copy-linkedin-btn" type="button" class="btn btn-secondary btn-with-icon button-md" data-copy-value="https://www.linkedin.com/in/katia-danishevska-122224445" data-copied="false">
+                <span data-copy-label>Copy LinkedIn URL</span>
+                <span class="icon-crossfade" aria-hidden="true">
+                  <span class="copy-icon-default">
+                    <svg width="16" height="16" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><rect x="40" y="88" width="128" height="128" rx="12"/><path d="M88 88V52a12 12 0 0 1 12-12h104a12 12 0 0 1 12 12v104a12 12 0 0 1-12 12h-36"/></svg>
+                  </span>
+                  <span class="copy-icon-check">
+                    <svg width="16" height="16" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"><path d="M40 144l56 56L216 80"/></svg>
+                  </span>
+                </span>
+              </button>
+            </div>
+            <p id="copy-linkedin-status" class="caption-4 text-teal mt-2" aria-live="polite"></p>
           </div>
 
-          <!-- Step 2 -->
-          <div class="relative">
-            <div class="text-6xl font-semibold text-neutral-100 dark:text-surface-300 mb-4">02</div>
-            <h3 class="text-xl font-semibold mb-3">Source</h3>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400" style="text-wrap: pretty;">
-              Targeted sourcing through industry networks, direct outreach, and carefully maintained relationships with senior professionals.
+          <!-- Client-Side Validated Inquiry Panel -->
+          <div class="card">
+            <h3 class="title-1">Send an inquiry note</h3>
+            <p class="body-6 text-secondary mt-1">
+              All fields validate locally before submission.
             </p>
+
+            <form id="inquiry-form" class="form-grid mt-3" novalidate>
+              <div class="field-group">
+                <label for="inq-name" class="caption-1">Full name <span aria-hidden="true">*</span></label>
+                <input id="inq-name" name="name" type="text" class="field-input" autocomplete="name" required minlength="2" data-validate data-err-required="Please enter your full name." aria-describedby="inq-name-error">
+                <span id="inq-name-error" class="field-error caption-4" aria-live="polite"></span>
+              </div>
+
+              <div class="field-group">
+                <label for="inq-email" class="caption-1">Work email <span aria-hidden="true">*</span></label>
+                <input id="inq-email" name="email" type="email" inputmode="email" class="field-input" autocomplete="email" autocorrect="off" autocapitalize="none" spellcheck="false" required data-validate data-err-required="Please enter your email address." aria-describedby="inq-email-error">
+                <span id="inq-email-error" class="field-error caption-4" aria-live="polite"></span>
+              </div>
+
+              <div class="field-group">
+                <label for="inq-topic" class="caption-1">Conversation topic</label>
+                <select id="inq-topic" name="topic" class="field-select">
+                  <option value="Executive Search Mandate">Executive Search Mandate</option>
+                  <option value="Digital Assets & FinTech Hiring">Digital Assets &amp; FinTech Hiring</option>
+                  <option value="Senior Candidate Introduction">Senior Candidate Introduction</option>
+                  <option value="Advisory & Collaborations">Advisory &amp; Collaborations</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="inq-message" class="caption-1">Message <span aria-hidden="true">*</span></label>
+                <textarea id="inq-message" name="message" class="field-textarea" required minlength="12" data-validate data-err-required="Please include brief context for your inquiry." aria-describedby="inq-message-error"></textarea>
+                <span id="inq-message-error" class="field-error caption-4" aria-live="polite"></span>
+              </div>
+
+              <button id="inquiry-submit" type="submit" class="btn btn-primary button-md">Prepare inquiry</button>
+
+              <div id="inquiry-skeleton" class="skeleton-lines hidden" aria-hidden="true">
+                <div class="skeleton-bar" style="width: 72%;"></div>
+                <div class="skeleton-bar" style="width: 90%;"></div>
+              </div>
+
+              <div id="inquiry-result" class="form-status caption-2 hidden" role="status" aria-live="polite"></div>
+            </form>
           </div>
-
-          <!-- Step 3 -->
-          <div class="relative">
-            <div class="text-6xl font-semibold text-neutral-100 dark:text-surface-300 mb-4">03</div>
-            <h3 class="text-xl font-semibold mb-3">Deliver</h3>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400" style="text-wrap: pretty;">
-              End-to-end support through evaluation, interviews, and offer negotiations. Building the relationship beyond the placement.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════ -->
-    <!-- CONTACT SECTION                         -->
-    <!-- ═══════════════════════════════════════ -->
-    <section id="contact" class="py-24 md:py-32 px-6 reveal-section">
-      <div class="max-w-3xl mx-auto text-center">
-        <span class="text-sm font-medium text-accent dark:text-accent-light mb-4 block">Connect</span>
-        <h2 class="text-4xl md:text-5xl font-semibold mb-6" style="text-wrap: balance;">
-          Let's start a conversation
-        </h2>
-        <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-10 max-w-xl mx-auto" style="text-wrap: pretty;">
-          Whether you are building a team or exploring your next career move, I would love to hear from you.
-        </p>
-
-        <!-- Contact Methods -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          <a href="https://www.linkedin.com/in/katiadanishevska-122224445" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-[#0A66C2] text-white font-semibold text-base hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 ease-smooth shadow-lg shadow-[#0A66C2]/20">
-            <i class="ph ph-linkedin-logo text-xl"></i>
-            Connect on LinkedIn
-          </a>
-          <a href="mailto:katia.danishevska@email.com" class="group inline-flex items-center gap-3 px-6 py-3 rounded-xl border border-neutral-300 dark:border-surface-400 text-neutral-700 dark:text-neutral-300 font-semibold text-base hover:bg-neutral-50 dark:hover:bg-surface-200 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 ease-smooth">
-            <i class="ph ph-envelope text-xl"></i>
-            Send an email
-          </a>
-        </div>
-
-        <!-- Availability note -->
-        <div class="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-neutral-50 dark:bg-surface-200 border border-neutral-200/50 dark:border-surface-400/50">
-          <i class="ph ph-clock text-lg text-neutral-500"></i>
-          <span class="text-sm text-neutral-600 dark:text-neutral-400">
-            Available in European and Asian time zones
-          </span>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ═══════════════════════════════════════ -->
-  <!-- FOOTER                                  -->
-  <!-- ═══════════════════════════════════════ -->
-  <footer class="py-8 px-6 border-t border-neutral-200/50 dark:border-surface-400/50">
-    <div class="max-w-5xl mx-auto">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
-        <div class="flex items-center gap-2">
-          <span class="text-sm text-neutral-500">© 2026 Katia Danishevska</span>
+  <!-- Official Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span class="brand-badge" aria-hidden="true">KD</span>
+          <span class="caption-2 text-secondary">© 2026 Katia Danishevska</span>
         </div>
-        <div class="flex items-center gap-6">
-          <a href="https://www.linkedin.com/in/katiadanishevska-122224445" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-300" aria-label="LinkedIn">
-            <i class="ph ph-linkedin-logo text-lg"></i>
-          </a>
-          <span class="text-xs text-neutral-400 dark:text-neutral-600">
-            Crafted by <span class="font-medium text-neutral-500 dark:text-neutral-500">Az.</span>
-          </span>
+
+        <div class="footer-links">
+          <a href="experience.html" class="footer-text-link caption-2">Experience</a>
+          <a href="mandates.html" class="footer-text-link caption-2">Mandates</a>
+          <a href="https://www.linkedin.com/in/katia-danishevska-122224445" target="_blank" rel="noopener noreferrer" class="footer-text-link caption-2">LinkedIn</a>
+          <button type="button" class="footer-text-link caption-2" data-open-dialog="privacy-dialog">Privacy</button>
+          <button type="button" class="footer-text-link caption-2" data-open-dialog="legal-dialog">Terms &amp; Notice</button>
+          <span class="caption-2 text-muted">Crafted by Az. Consultant</span>
         </div>
       </div>
-      <!-- Disclaimer -->
-      <div class="pt-4 border-t border-neutral-100 dark:border-surface-400/30">
-        <p class="text-xs text-neutral-400 dark:text-neutral-600 text-center max-w-2xl mx-auto" style="text-wrap: pretty;">
-          <strong class="text-neutral-500 dark:text-neutral-500">Disclaimer:</strong> This website is an unsolicited design concept and portfolio demonstration prepared by Az. for Katia Danishevska in response to her publicly posted LinkedIn request. All professional information is sourced from publicly available LinkedIn data. This is not an official representation and is presented solely as a design proposal. No proprietary or confidential information has been used.
+
+      <div class="footer-disclaimer">
+        <p class="caption-5 text-muted" style="max-width: 760px;">
+          <strong>Disclaimer:</strong> Independent personal website redesign concept prepared by Az. Consultant in response to Katia Danishevska's public LinkedIn post. All biography, tenure, and education details originate exclusively from publicly visible LinkedIn profile information, with no confidential data or official affiliation implied.
         </p>
+        <a href="design-notes.html" class="caption-4 text-secondary">View Design &amp; Architecture Notes</a>
       </div>
     </div>
   </footer>
 
-  <!-- ═══════════════════════════════════════ -->
-  <!-- SCRIPTS                                 -->
-  <!-- ═══════════════════════════════════════ -->
-  <script src="js/main.js"></script>
+  <!-- Native Accessible Dialogs -->
+  <dialog id="privacy-dialog" class="site-dialog" closedby="any" aria-labelledby="privacy-title">
+    <div class="dialog-head">
+      <h2 id="privacy-title" class="heading-5">Privacy Notice</h2>
+      <form method="dialog">
+        <button type="submit" class="icon-btn" aria-label="Close privacy notice">
+          <svg width="16" height="16" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" aria-hidden="true"><path d="M56 56l144 144M200 56L56 200"/></svg>
+        </button>
+      </form>
+    </div>
+    <p class="body-5 text-secondary">
+      This static preview operates without analytics trackers, marketing cookies, or third party behavioral scripts. Theme preference is stored solely in your browser local storage and can be reset at any time. Inquiry inputs validate locally inside your browser and are not transmitted to an external database.
+    </p>
+  </dialog>
+
+  <dialog id="legal-dialog" class="site-dialog" closedby="any" aria-labelledby="legal-title">
+    <div class="dialog-head">
+      <h2 id="legal-title" class="heading-5">Terms &amp; Concept Notice</h2>
+      <form method="dialog">
+        <button type="submit" class="icon-btn" aria-label="Close terms and notice">
+          <svg width="16" height="16" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" aria-hidden="true"><path d="M56 56l144 144M200 56L56 200"/></svg>
+        </button>
+      </form>
+    </div>
+    <p class="body-5 text-secondary">
+      This site is an independent design and engineering submission created by Az. Consultant for evaluation by Katia Danishevska. Company names including SwissChain, AMINA Bank, ManpowerGroup, ISG International Service Group, and Adecco Slovenia appear strictly as historical career references from public LinkedIn records.
+    </p>
+  </dialog>
+
+  <script defer src="js/flux-canvas.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
 </html>

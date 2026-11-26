@@ -1,0 +1,11 @@
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), geolocation=(), microphone=()
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+
+/assets/*
+  Cache-Control: public, max-age=86400
+  Access-Control-Allow-Origin: *
+  Cross-Origin-Resource-Policy: cross-origin

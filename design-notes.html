@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      var s = localStorage.getItem('color-scheme');
+      if (s === 'dark' || s === 'light') {
+        document.querySelector('meta[name="color-scheme"]').content = s;
+        document.documentElement.setAttribute('data-theme', s);
+      }
+    } catch (e) {}
+  </script>
+
+  <title>Design &amp; Architecture Notes | Az. Consultant</title>
+  <meta name="description" content="Engineering, typography, motion, accessibility, and edge deployment architecture prepared by Az. Consultant for Katia Danishevska.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://katia-danishevska.pages.dev/design-notes.html">
+
+  <meta property="og:site_name" content="Katia Danishevska">
+  <meta property="og:title" content="Design &amp; Architecture Notes | Prepared by Az. Consultant">
+  <meta property="og:image" content="https://katia-danishevska.pages.dev/assets/og-card.jpg">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a href="#main" class="skip-link button-sm">Skip to content</a>
+  <div id="scroll-progress-bar" class="scroll-progress-bar" aria-hidden="true"></div>
+  <div id="nav-sentinel" class="nav-sentinel" aria-hidden="true"></div>
+
+  <header class="site-nav-wrap">
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="index.html" class="brand-mark" aria-label="Katia Danishevska Home">
+        <span class="brand-badge" aria-hidden="true">KD</span>
+        <span class="title-4">Katia Danishevska</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link title-4">Overview</a></li>
+        <li><a href="experience.html" class="nav-link title-4">Experience</a></li>
+        <li><a href="mandates.html" class="nav-link title-4">Mandates</a></li>
+        <li><a href="design-notes.html" class="nav-link title-4" aria-current="page">Craft Notes</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" type="button" class="icon-btn" aria-label="Toggle color theme" aria-pressed="false">
+          <span class="icon-crossfade" aria-hidden="true">
+            <span class="theme-icon-sun">
+              <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><circle cx="128" cy="128" r="48"/><path d="M128 36v-12M128 232v-12M63 63l-9-9M202 202l-9-9M36 128H24M232 128h-12M63 193l-9 9M202 54l-9 9"/></svg>
+            </span>
+            <span class="theme-icon-moon">
+              <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M210.7 152.6A92 92 0 0 1 103.4 45.3a92 92 0 1 0 107.3 107.3Z"/></svg>
+            </span>
+          </span>
+        </button>
+
+        <button id="menu-toggle" type="button" class="icon-btn menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="hamburger-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile menu" aria-hidden="true">
+    <a href="index.html" class="mobile-drawer-link heading-5"><span>Return to Katia's Site</span><span class="mono-meta caption-4 text-muted">01</span></a>
+    <a href="experience.html" class="mobile-drawer-link heading-5"><span>Experience</span><span class="mono-meta caption-4 text-muted">02</span></a>
+    <a href="mandates.html" class="mobile-drawer-link heading-5"><span>Mandates</span><span class="mono-meta caption-4 text-muted">03</span></a>
+  </aside>
+
+  <main id="main" tabindex="-1">
+    <section class="section" style="padding-top: 144px;">
+      <div class="container">
+        <div style="max-width: 680px;">
+          <a href="index.html" class="caption-2 text-secondary">← Return to Personal Website</a>
+          <h1 class="heading-1 hero-gradient-text mt-2">Design &amp; Architecture Notes</h1>
+          <p class="body-2 text-secondary mt-3">
+            Technical brief prepared by Az. Consultant outlining the visual choices, bespoke canvas engineering, accessibility safeguards, and edge delivery architecture behind this redesign proposal.
+          </p>
+        </div>
+
+        <!-- Architecture Wiring -->
+        <div class="mt-6">
+          <h2 class="heading-4 mb-3">System Architecture Wiring</h2>
+          <div class="arch-pipeline">
+            <article class="arch-node">
+              <span class="mono-meta caption-3 text-teal">01 · SEMANTIC CORE</span>
+              <h3 class="title-2">Zero Runtime HTML &amp; CSS</h3>
+              <p class="body-6 text-secondary">
+                Pure layered CSS tokens with zero client framework runtime, eliminating render blocking compilers and preserving instant paint across European and Asian networks.
+              </p>
+            </article>
+
+            <article class="arch-node">
+              <span class="mono-meta caption-3 text-teal">02 · BESPOKE CANVAS</span>
+              <h3 class="title-2">Dual HTML5 2x Canvas</h3>
+              <p class="body-6 text-secondary">
+                Architectural hero contour field and interactive Zürich to Ljubljana market corridor map rendered at crisp Retina density with reduced motion support.
+              </p>
+            </article>
+
+            <article class="arch-node">
+              <span class="mono-meta caption-3 text-teal">03 · COLOR &amp; ACCESSIBILITY</span>
+              <h3 class="title-2">System Aware Light &amp; Dark</h3>
+              <p class="body-6 text-secondary">
+                Native color scheme meta wiring with early inline FOUC prevention, cross tab sync, native modal dialogs, keyboard focus rings, and inert drawer traps.
+              </p>
+            </article>
+
+            <article class="arch-node">
+              <span class="mono-meta caption-3 text-teal">04 · EDGE DELIVERY</span>
+              <h3 class="title-2">Cloudflare Edge &amp; OG Logo</h3>
+              <p class="body-6 text-secondary">
+                Hardened response headers, dedicated custom 404 route, and verified 1200x630 plus 600x600 monogram assets for clean WhatsApp and LinkedIn previews.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="grid-2 mt-6">
+          <article class="card">
+            <h2 class="heading-5">Why This Direction Fits Katia's Brand</h2>
+            <p class="body-5 text-secondary mt-2">
+              Her career spans regulated Swiss digital asset banking at AMINA Bank and senior executive hiring at SwissChain. Instead of generic dark gradients or synthetic portraits, the visual language pairs Swiss typographic restraint with warm alabaster light surfaces and calibrated dark graphite panels.
+            </p>
+          </article>
+
+          <article class="card">
+            <h2 class="heading-5">Collaboration Readiness</h2>
+            <p class="body-5 text-secondary mt-2">
+              Every section, text token, domain link, and contact endpoint can be wired directly to a custom domain and live mail relay on handoff. Prepared cleanly by Az. Consultant with full static portability.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span class="brand-badge" aria-hidden="true">KD</span>
+          <span class="caption-2 text-secondary">© 2026 Katia Danishevska</span>
+        </div>
+        <div class="footer-links">
+          <a href="index.html" class="footer-text-link caption-2">Overview</a>
+          <a href="experience.html" class="footer-text-link caption-2">Experience</a>
+          <a href="mandates.html" class="footer-text-link caption-2">Mandates</a>
+          <span class="caption-2 text-muted">Crafted by Az. Consultant</span>
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        <p class="caption-5 text-muted" style="max-width: 760px;">
+          <strong>Disclaimer:</strong> Design and architecture documentation prepared independently by Az. Consultant. No external links are embedded on consultant attribution.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="js/main.js"></script>
+</body>
+</html>
