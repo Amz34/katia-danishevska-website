@@ -33,7 +33,7 @@
   </script>
 
   <title>Katia Danishevska | Strategic Talent Partner</title>
-  <meta name="description" content="Talent acquisition and executive hiring across financial services, technology, and digital assets. Around ten years connecting companies with specialists and leaders.">
+  <meta name="description" content="Strategic Talent Partner specializing in Digital Assets, FinTech, and Executive Search across Switzerland, Europe, and global financial hubs.">
   <link rel="canonical" href="https://katia-danishevska.pages.dev/">
 
   <!-- Social & Link Previews -->
@@ -77,6 +77,8 @@
         <li><a href="index.html" class="nav-link title-4" aria-current="page">Overview</a></li>
         <li><a href="experience.html" class="nav-link title-4">Experience</a></li>
         <li><a href="mandates.html" class="nav-link title-4">Focus</a></li>
+        <li><a href="#corridors" class="nav-link title-4">Corridors</a></li>
+        <li><a href="#methodology" class="nav-link title-4">Methodology</a></li>
         <li><a href="#connect" class="nav-link title-4">Connect</a></li>
       </ul>
 
@@ -108,12 +110,14 @@
     <a href="index.html" class="mobile-drawer-link heading-5"><span>Overview</span><span class="mono-meta caption-4 text-muted">01</span></a>
     <a href="experience.html" class="mobile-drawer-link heading-5"><span>Experience</span><span class="mono-meta caption-4 text-muted">02</span></a>
     <a href="mandates.html" class="mobile-drawer-link heading-5"><span>Focus</span><span class="mono-meta caption-4 text-muted">03</span></a>
-    <a href="#connect" class="mobile-drawer-link heading-5"><span>Connect</span><span class="mono-meta caption-4 text-muted">04</span></a>
+    <a href="#corridors" class="mobile-drawer-link heading-5"><span>Corridors</span><span class="mono-meta caption-4 text-muted">04</span></a>
+    <a href="#methodology" class="mobile-drawer-link heading-5"><span>Methodology</span><span class="mono-meta caption-4 text-muted">05</span></a>
+    <a href="#connect" class="mobile-drawer-link heading-5"><span>Connect</span><span class="mono-meta caption-4 text-muted">06</span></a>
   </aside>
 
   <main id="main" tabindex="-1">
 
-    <!-- 1. HERO: AUTHENTIC SWISS EDITORIAL -->
+    <!-- 1. HERO: SWISS EDITORIAL ARCHITECTURE -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
         <div class="hero-grid">
@@ -124,13 +128,13 @@
             </div>
 
             <h1 id="hero-title" class="heading-1 hero-gradient-text">
-              Talent acquisition and<br>
+              Talent acquisition &amp;<br>
               executive hiring for<br>
               digital assets and fintech.
             </h1>
 
             <p class="body-2 hero-sub">
-              Around ten years of recruitment across financial services, technology and digital assets, including nearly six years at AMINA Bank in Zug.
+              Around ten years of talent acquisition across digital assets, financial technology, and executive search, including nearly six years at AMINA Bank in Zug.
             </p>
 
             <div class="hero-actions">
@@ -147,34 +151,31 @@
               <a href="experience.html" class="btn btn-secondary button-md">View Career Dossier</a>
             </div>
 
-            <!-- 4 Verified Profile Facts -->
             <dl class="hero-proof-strip">
               <div>
                 <dt class="caption-4 text-muted">Experience</dt>
                 <dd class="title-2 tabular-nums mt-1">~10 Years</dd>
               </div>
               <div>
-                <dt class="caption-4 text-muted">AMINA Bank, Zug</dt>
+                <dt class="caption-4 text-muted">Swiss Banking Tenure</dt>
                 <dd class="title-2 tabular-nums mt-1">5 yrs 10 mos</dd>
               </div>
               <div>
                 <dt class="caption-4 text-muted">Current Role</dt>
-                <dd class="title-2 mt-1">SwissChain, Ljubljana</dd>
+                <dd class="title-2 mt-1">SwissChain</dd>
               </div>
               <div>
                 <dt class="caption-4 text-muted">Education</dt>
-                <dd class="title-2 mt-1">MSc HRM · Ljubljana</dd>
+                <dd class="title-2 mt-1">MSc in HRM</dd>
               </div>
             </dl>
           </div>
 
-          <!-- Editorial Dossier Card (Ordered & Verified) -->
+          <!-- Editorial Dossier Card (Exact Order Matching Attached Reference) -->
           <div class="dossier-frame" aria-label="Executive profile summary">
             <div class="dossier-inner">
               <div class="dossier-top">
-                <div class="dossier-monogram" aria-hidden="true">
-                  <span>KD</span>
-                </div>
+                <div class="dossier-monogram" aria-hidden="true">KD</div>
                 <div style="text-align: right;">
                   <div class="mono-meta caption-4 text-teal">ZÜRICH · ZUG · LJUBLJANA</div>
                   <div class="mono-meta caption-5 text-muted mt-1">Swiss &amp; European Talent Corridors</div>
@@ -218,7 +219,7 @@
     </section>
 
     <!-- 2. GUIDING STATEMENT -->
-    <section class="tagline-section section-band" aria-label="Guiding approach">
+    <section class="tagline-section section-band" aria-label="Guiding principle">
       <div class="container">
         <p id="tagline-reveal" class="heading-2 tagline-text">
           I connect companies with the right people, from experienced specialists and managers to senior leaders across fintech, blockchain and digital-asset businesses.
@@ -226,29 +227,29 @@
       </div>
     </section>
 
-    <!-- 3. ABOUT & PERSPECTIVE -->
+    <!-- 3. PERSPECTIVE & PRACTICE PILLARS -->
     <section id="about" class="section reveal-block" aria-labelledby="about-heading">
       <div class="container">
         <div class="grid-asymmetric">
           <div>
             <span class="caption-3 text-teal">Perspective</span>
             <h2 id="about-heading" class="heading-3 mt-1">
-              Connecting specialists, managers and senior leaders
+              Grounded in European markets and Swiss regulated finance
             </h2>
             <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 24px;" class="text-secondary">
               <p class="body-3">
-                My career has taken me across Europe and international markets, including valuable years in Switzerland. It has shaped how I understand talent markets, work across cultures and approach hiring in growing businesses.
+                Throughout my career across Switzerland, Slovenia, and wider international markets, I have partnered closely with founders, functional heads, and hiring committees navigating complex talent landscapes.
               </p>
               <p class="body-3">
-                Spending nearly six years inside Swiss digital asset banking at AMINA Bank in Zug and now at SwissChain has given me firsthand appreciation for the delicate balance between technical specialization, regulatory governance, and cultural fit.
+                Spending nearly six years inside regulated Swiss digital asset banking at AMINA Bank in Zug and now at SwissChain has shaped how I calibrate hiring: precision over volume, multicultural fluency, and genuine relationships with senior specialists.
               </p>
               <p class="body-3">
-                I enjoy working closely with hiring managers, understanding what the business needs and building meaningful relationships with candidates.
+                Whether building foundational engineering and compliance teams or placing department leadership, every hire balances immediate operational priorities with long-term team culture.
               </p>
             </div>
             <div class="mt-4">
-              <a href="experience.html" class="btn btn-secondary btn-with-icon button-sm">
-                <span>View Full Career Progression</span>
+              <a href="mandates.html" class="btn btn-secondary btn-with-icon button-sm">
+                <span>Explore Functional Areas of Focus</span>
                 <svg width="16" height="16" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M40 128h176M144 56l72 72-72 72"/></svg>
               </a>
             </div>
@@ -259,9 +260,9 @@
               <div class="card-icon-box" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><circle cx="128" cy="128" r="88"/><path d="M128 40v176M40 128h176"/></svg>
               </div>
-              <h3 class="title-2">Executive &amp; Leadership</h3>
+              <h3 class="title-2">Digital Assets &amp; Web3</h3>
               <p class="body-6 text-secondary mt-1">
-                Department heads and selected leadership roles defined in direct alignment with company founders and executives.
+                Specialist and leadership hiring for blockchain protocols, MPC custody infrastructure, and regulated digital finance.
               </p>
             </article>
 
@@ -269,9 +270,9 @@
               <div class="card-icon-box" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M32 208h192M56 168l48-48 36 36 60-76"/></svg>
               </div>
-              <h3 class="title-2">Senior &amp; Specialist Talent</h3>
+              <h3 class="title-2">Regulated FinTech Growth</h3>
               <p class="body-6 text-secondary mt-1">
-                Experienced professionals across digital assets, blockchain technology, fintech, and modern financial services.
+                Talent acquisition for high-velocity financial technology ventures, cross-border trading, and institutional banking.
               </p>
             </article>
 
@@ -279,9 +280,9 @@
               <div class="card-icon-box" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M128 32L32 80l96 48 96-48-96-48Z"/><path d="M32 128l96 48 96-48M32 176l96 48 96-48"/></svg>
               </div>
-              <h3 class="title-2">Strategic Sourcing</h3>
+              <h3 class="title-2">Executive &amp; Leadership</h3>
               <p class="body-6 text-secondary mt-1">
-                Targeted talent pipelines across Switzerland, Europe, and international digital finance centers.
+                Recruitment for department heads, directors, and selected functional leaders calibrated directly with company executives.
               </p>
             </article>
 
@@ -289,9 +290,9 @@
               <div class="card-icon-box" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><circle cx="128" cy="128" r="96"/><path d="M128 32a96 96 0 0 1 0 192M128 80a48 48 0 0 1 0 96"/></svg>
               </div>
-              <h3 class="title-2">Core Functions</h3>
+              <h3 class="title-2">Governance &amp; Operations</h3>
               <p class="body-6 text-secondary mt-1">
-                Hiring across business development, technology, compliance, operations, and finance roles.
+                Building compliance, regulatory risk, operational finance, and business development capabilities across European frameworks.
               </p>
             </article>
           </div>
@@ -299,85 +300,340 @@
       </div>
     </section>
 
-    <!-- 4. HOW I WORK (4 STEP RECRUITMENT APPROACH) -->
-    <section class="section section-band reveal-block" aria-labelledby="method-heading">
+    <!-- 4. STATIC SWISS EXECUTIVE TALENT CORRIDOR MATRIX -->
+    <section id="corridors" class="section section-band reveal-block" aria-labelledby="corridors-heading">
       <div class="container">
-        <div style="max-width: 680px; margin-bottom: 32px;">
-          <span class="caption-3 text-teal">Approach</span>
-          <h2 id="method-heading" class="heading-3 mt-1">
-            How I collaborate with hiring teams
+        <div style="max-width: 680px; margin-bottom: 24px;">
+          <span class="caption-3 text-teal">Market Corridors &amp; Geographic Scope</span>
+          <h2 id="corridors-heading" class="heading-3 mt-1">
+            Swiss-rooted, European-connected talent corridors
           </h2>
           <p class="body-3 text-secondary mt-2">
-            Every hiring priority is grounded in direct stakeholder alignment, targeted outreach, and transparent communication.
+            Structured search corridors engineered for regulatory rigor, technical depth, and cross-border leadership placement.
           </p>
         </div>
 
         <div class="corridor-matrix-grid">
+          <!-- Column 1: Zürich & Zug (Crypto Valley) -->
           <article class="corridor-card">
             <div>
               <div class="corridor-card-header">
-                <span class="corridor-tag">Step 01</span>
-                <h3 class="title-1 mt-1">Understand the business</h3>
+                <span class="corridor-tag">Swiss Banking &amp; Digital Assets</span>
+                <h3 class="title-1 mt-1">Zürich &amp; Crypto Valley (Zug)</h3>
                 <p class="body-6 text-secondary">
-                  Work directly with hiring managers to define hiring priorities, candidate requirements, compensation parameters, and team dynamics.
+                  Specialized placement of department heads, senior compliance officers, and technology specialists across Swiss digital banking and institutional custody.
                 </p>
               </div>
+
+              <ul class="corridor-list">
+                <li>Regulatory Compliance &amp; Financial Crime Risk</li>
+                <li>General Counsel &amp; Legal Affairs</li>
+                <li>Custody Infrastructure &amp; Security Engineering</li>
+                <li>Institutional Business Development &amp; Client Coverage</li>
+              </ul>
             </div>
+
             <div class="corridor-compliance-badge">
-              Clear Alignment · Realistic Calibration
+              Swiss Institutional Standard · FINMA Regulated Background
             </div>
           </article>
 
+          <!-- Column 2: European Engineering Corridors -->
           <article class="corridor-card">
             <div>
               <div class="corridor-card-header">
-                <span class="corridor-tag">Step 02</span>
-                <h3 class="title-1 mt-1">Source with intent</h3>
+                <span class="corridor-tag">Distributed Systems &amp; Labs</span>
+                <h3 class="title-1 mt-1">Ljubljana · London · DACH</h3>
                 <p class="body-6 text-secondary">
-                  Reach high-quality candidates through proactive direct sourcing, trusted referrals, and established professional networks across Europe and Switzerland.
+                  Connecting high-density technical engineering clusters in Central Europe and the UK with Swiss, European, and global digital asset ventures.
                 </p>
               </div>
+
+              <ul class="corridor-list">
+                <li>Software Architects &amp; Technical Leads</li>
+                <li>Blockchain &amp; Distributed Systems Specialists</li>
+                <li>Senior Protocol &amp; Infrastructure Engineers</li>
+                <li>Product Management &amp; Growth Operators</li>
+              </ul>
             </div>
+
             <div class="corridor-compliance-badge">
-              Direct Sourcing · International Networks
+              Deep Technical Calibration · Direct Network Referencing
             </div>
           </article>
 
+          <!-- Column 3: Global Expansion Corridors -->
           <article class="corridor-card">
             <div>
               <div class="corridor-card-header">
-                <span class="corridor-tag">Step 03</span>
-                <h3 class="title-1 mt-1">Advise throughout</h3>
+                <span class="corridor-tag">Cross-Border Scope</span>
+                <h3 class="title-1 mt-1">Singapore · UAE · Global Markets</h3>
                 <p class="body-6 text-secondary">
-                  Share market insight on candidate profiles, regional availability, and competitive compensation to guide balanced hiring decisions.
+                  Connecting international professionals navigating cross-border regulatory harmonization, regional market expansion, and liquidity partnerships.
                 </p>
               </div>
+
+              <ul class="corridor-list">
+                <li>Regional Business Leads &amp; Market Heads</li>
+                <li>Institutional Operations &amp; Clearing</li>
+                <li>Risk Management &amp; International Governance</li>
+                <li>Strategic Partnerships &amp; Ecosystem Growth</li>
+              </ul>
             </div>
+
             <div class="corridor-compliance-badge">
-              Market Intelligence · Ongoing Consultation
+              Cross-Border Mobility · Multi-Jurisdictional Experience
             </div>
           </article>
         </div>
 
-        <div style="margin-top: 16px;">
-          <article class="card">
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
-              <div>
-                <span class="corridor-tag">Step 04</span>
-                <h3 class="title-1 mt-1">Support the decision</h3>
-                <p class="body-5 text-secondary mt-1" style="max-width: 640px;">
-                  Coordinate structured interviews, facilitate thorough stakeholder feedback, and support offer negotiations that build lasting trust with candidates.
-                </p>
-              </div>
-              <a href="mandates.html" class="btn btn-secondary button-sm">Explore Areas of Focus</a>
-            </div>
-          </article>
+        <!-- Practice Standards Strip -->
+        <div class="metrics-strip">
+          <div class="metric-box">
+            <div class="metric-value">~10 Years</div>
+            <div class="metric-tag">Established Talent Network</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-value">5y 10m</div>
+            <div class="metric-tag">Swiss Banking Tenure (Zug)</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-value">Structured</div>
+            <div class="metric-tag">Candidate Calibration</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-value">100%</div>
+            <div class="metric-tag">Professional Discretion</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 5. HONEST CONNECT & NOTE PREPARATION -->
-    <section id="connect" class="section reveal-block" aria-labelledby="connect-heading">
+    <!-- 5. REPRESENTATIVE SEARCH MANDATES & DISCRETION PROTOCOL -->
+    <section id="track-record" class="section reveal-block" aria-labelledby="track-record-heading">
+      <div class="container">
+        <div style="max-width: 680px; margin-bottom: 24px;">
+          <span class="caption-3 text-teal">Search Scope</span>
+          <h2 id="track-record-heading" class="heading-3 mt-1">
+            Representative leadership &amp; specialist search profiles
+          </h2>
+          <p class="body-3 text-secondary mt-2">
+            Key functional areas and leadership appointments executed across digital banking, institutional custody, and financial technology platforms.
+          </p>
+        </div>
+
+        <div class="placement-case-grid">
+          <article class="placement-case-card">
+            <span class="mono-meta caption-4 text-teal">DIGITAL BANKING &amp; GOVERNANCE · ZUG</span>
+            <h3 class="title-2 mt-1">Compliance &amp; Legal Leadership</h3>
+            <p class="body-6 text-secondary mt-2">
+              Sourcing senior regulatory officers, legal counsels, and financial crime specialists experienced in European banking regulations and AML governance.
+            </p>
+            <div class="mono-meta caption-5 text-muted mt-3">Core Scope: Regulatory Governance &amp; AML</div>
+          </article>
+
+          <article class="placement-case-card">
+            <span class="mono-meta caption-4 text-teal">INSTITUTIONAL INFRASTRUCTURE · ZÜRICH</span>
+            <h3 class="title-2 mt-1">Engineering &amp; Custody Leadership</h3>
+            <p class="body-6 text-secondary mt-2">
+              Identifying software engineering directors, distributed systems architects, and cryptography specialists building institutional digital asset custody solutions.
+            </p>
+            <div class="mono-meta caption-5 text-muted mt-3">Core Scope: Blockchain &amp; Core Infrastructure</div>
+          </article>
+
+          <article class="placement-case-card">
+            <span class="mono-meta caption-4 text-teal">MARKET EXPANSION · DACH &amp; EUROPE</span>
+            <h3 class="title-2 mt-1">Institutional Sales &amp; Growth</h3>
+            <p class="body-6 text-secondary mt-2">
+              Recruiting relationship leaders and business development heads with proven institutional coverage across asset managers, family offices, and brokerages.
+            </p>
+            <div class="mono-meta caption-5 text-muted mt-3">Core Scope: Institutional Client Coverage</div>
+          </article>
+        </div>
+
+        <!-- Discretion Protocol Banner -->
+        <div class="discretion-banner">
+          <div>
+            <span class="caption-3 text-teal">Discretion &amp; Trust</span>
+            <h3 class="heading-4 mt-1">Mutual Discretion &amp; Relationship Governance</h3>
+            <p class="body-5 text-secondary mt-2">
+              In specialized sectors like Swiss private banking and digital asset technology, discretion is essential. Every search is handled with thoughtful confidentiality, direct communication, and thorough referencing within established industry networks.
+            </p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="dossier-row">
+              <span class="caption-4 text-muted">Direct Sourcing</span>
+              <span class="body-5">Close stakeholder alignment</span>
+            </div>
+            <div class="dossier-row">
+              <span class="caption-4 text-muted">Confidentiality</span>
+              <span class="body-5">Candidate trust protected</span>
+            </div>
+            <div class="dossier-row">
+              <span class="caption-4 text-muted">Network Depth</span>
+              <span class="body-5">Swiss &amp; European relationships</span>
+            </div>
+            <div class="mt-2">
+              <a href="mandates.html" class="btn btn-secondary button-sm">Explore Areas of Focus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CAREER PROGRESSION -->
+    <section class="section section-band reveal-block" aria-labelledby="journey-heading">
+      <div class="container">
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 40px;">
+          <div style="max-width: 640px;">
+            <span class="caption-3 text-teal">Career Progression</span>
+            <h2 id="journey-heading" class="heading-3 mt-1">
+              Consistent progression across specialist sourcing and executive hiring
+            </h2>
+          </div>
+          <a href="experience.html" class="btn btn-secondary btn-with-icon button-sm">
+            <span>Full Career Timeline</span>
+            <svg width="16" height="16" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M40 128h176M144 56l72 72-72 72"/></svg>
+          </a>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline-entry is-current">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="card">
+              <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;">
+                <div>
+                  <h3 class="title-1">Senior Talent Acquisition Partner</h3>
+                  <p class="body-5 text-teal mt-1">SwissChain · Ljubljana, Slovenia</p>
+                </div>
+                <span class="mono-meta caption-2 text-muted">October 2025 to Present</span>
+              </div>
+              <p class="body-5 text-secondary mt-2">
+                Leading end-to-end recruitment for senior, specialist and leadership positions across digital assets, fintech, technology, compliance, operations, and finance.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-entry">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="card">
+              <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;">
+                <div>
+                  <h3 class="title-1">Talent Acquisition Partner · 3 Successive Roles</h3>
+                  <p class="body-5 text-accent mt-1">AMINA Bank · Zug, Switzerland</p>
+                </div>
+                <span class="mono-meta caption-2 text-muted">January 2020 to October 2025 (5 yrs 10 mos)</span>
+              </div>
+              <p class="body-5 text-secondary mt-2">
+                Served nearly six years inside Swiss digital asset banking across three promotions: Talent Acquisition Specialist, TA Partner for Banking &amp; Digital Assets, and TA Partner for Digital Assets &amp; FinTech. Recruited department heads, specialists, and institutional finance personnel.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-entry">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="card">
+              <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;">
+                <div>
+                  <h3 class="title-1">Recruitment Consultant &amp; Sourcing Foundations</h3>
+                  <p class="body-5 text-secondary mt-1">ManpowerGroup · ISG International · Adecco Slovenia</p>
+                </div>
+                <span class="mono-meta caption-2 text-muted">June 2014 to December 2019</span>
+              </div>
+              <p class="body-5 text-secondary mt-2">
+                Built international recruitment and technical sourcing capabilities across IT, technology, and business management following a Master Degree in Human Resource Management at the University of Ljubljana.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 7. SPLIT ACCORDION: COLLABORATION METHODOLOGY -->
+    <section id="methodology" class="section reveal-block" aria-labelledby="method-heading">
+      <div class="container">
+        <div class="grid-asymmetric">
+          <div>
+            <span class="caption-3 text-teal">How We Collaborate</span>
+            <h2 id="method-heading" class="heading-3 mt-1">
+              Clear alignment from first intake to offer close
+            </h2>
+            <p class="body-3 text-secondary mt-2">
+              Every search prioritizes honest market calibration, direct candidate relationships, and structured communication with hiring committees.
+            </p>
+          </div>
+
+          <div class="split-accordion" role="region" aria-label="Search methodology details">
+            <div class="split-acc-item is-open">
+              <h3>
+                <button type="button" class="split-acc-trigger title-2" aria-expanded="true">
+                  <span>01 · Business calibration before sourcing begins</span>
+                  <svg class="split-acc-chevron" width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M48 96l80 80 80-80"/></svg>
+                </button>
+              </h3>
+              <div class="split-acc-panel">
+                <div class="split-acc-inner">
+                  <p class="split-acc-content body-5">
+                    Partnering directly with hiring managers to define hiring priorities, candidate requirements, compensation parameters, and team dynamics.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="split-acc-item">
+              <h3>
+                <button type="button" class="split-acc-trigger title-2" aria-expanded="false">
+                  <span>02 · Direct sourcing and international talent pipelines</span>
+                  <svg class="split-acc-chevron" width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M48 96l80 80 80-80"/></svg>
+                </button>
+              </h3>
+              <div class="split-acc-panel">
+                <div class="split-acc-inner">
+                  <p class="split-acc-content body-5">
+                    Reaching high-quality candidates through proactive direct sourcing, trusted referrals, and established professional networks across Switzerland and Europe.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="split-acc-item">
+              <h3>
+                <button type="button" class="split-acc-trigger title-2" aria-expanded="false">
+                  <span>03 · Structured evaluation and ongoing counsel</span>
+                  <svg class="split-acc-chevron" width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M48 96l80 80 80-80"/></svg>
+                </button>
+              </h3>
+              <div class="split-acc-panel">
+                <div class="split-acc-inner">
+                  <p class="split-acc-content body-5">
+                    Sharing market insight on candidate profiles and availability while coordinating thoughtful interview stages and transparent stakeholder feedback.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="split-acc-item">
+              <h3>
+                <button type="button" class="split-acc-trigger title-2" aria-expanded="false">
+                  <span>04 · Thoughtful offer stewardship &amp; close</span>
+                  <svg class="split-acc-chevron" width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M48 96l80 80 80-80"/></svg>
+                </button>
+              </h3>
+              <div class="split-acc-panel">
+                <div class="split-acc-inner">
+                  <p class="split-acc-content body-5">
+                    Supporting offer negotiations and candidate onboarding to build long-term alignment and sustainable team architecture.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. DIRECT CONNECT & NOTE PREPARATION -->
+    <section id="connect" class="section section-band reveal-block" aria-labelledby="connect-heading">
       <div class="container">
         <div class="grid-asymmetric">
           <div>
@@ -386,7 +642,7 @@
               Start a conversation
             </h2>
             <p class="body-3 text-secondary mt-2" style="max-width: 520px;">
-              I'm glad to hear from hiring leaders and experienced professionals in digital assets and fintech.
+              I'm glad to hear from hiring leaders and experienced professionals in digital assets and fintech across European and international time zones.
             </p>
 
             <div class="hero-actions mt-4">
@@ -523,7 +779,7 @@
       </form>
     </div>
     <p class="body-5 text-secondary">
-      This site is an independent design submission created by Az. Consultant for evaluation by Katia Danishevska. Company names including SwissChain, AMINA Bank, ManpowerGroup, ISG International Service Group, and Adecco Slovenia appear strictly as historical career references from public LinkedIn records.
+      This site is an independent design submission created by Az. Consultant for evaluation by Katia Danishevska. Company names appear strictly as historical career references from public LinkedIn records.
     </p>
   </dialog>
 
@@ -2998,22 +3254,26 @@
   /* Executive Placement Metrics & Discretion Strip */
   .metrics-strip {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--sp-200);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--sp-100);
     margin-top: var(--sp-400);
   }
 
   @media (min-width: 768px) {
     .metrics-strip {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--sp-200);
     }
   }
 
   .metric-box {
     background-color: var(--bg-surface);
     border-radius: var(--r-lg);
-    padding: var(--sp-300);
+    padding: var(--sp-200);
     box-shadow: var(--shadow-border);
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .metric-value {

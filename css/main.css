@@ -1663,22 +1663,26 @@
   /* Executive Placement Metrics & Discretion Strip */
   .metrics-strip {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--sp-200);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--sp-100);
     margin-top: var(--sp-400);
   }
 
   @media (min-width: 768px) {
     .metrics-strip {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--sp-200);
     }
   }
 
   .metric-box {
     background-color: var(--bg-surface);
     border-radius: var(--r-lg);
-    padding: var(--sp-300);
+    padding: var(--sp-200);
     box-shadow: var(--shadow-border);
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .metric-value {
