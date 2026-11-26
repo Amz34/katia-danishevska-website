@@ -1,0 +1,178 @@
+/* ═══════════════════════════════════════ */
+/* CUSTOM STYLES                           */
+/* ═══════════════════════════════════════ */
+
+/* Hero heading gradient */
+.hero-gradient {
+  background: linear-gradient(to right, #000000, #666666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .hero-gradient {
+  background: linear-gradient(to right, #FFFFFF, #9B9B9B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(6px);
+  }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-slow-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-spin-slow-reverse {
+  animation: spin-slow-reverse 15s linear infinite;
+}
+
+/* Reveal animation for sections */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-section.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Timeline items stagger */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.timeline-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tagline reveal word styling */
+.tagline-word {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.2);
+  transition: color 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dark .tagline-word {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.tagline-word.active {
+  color: rgba(0, 0, 0, 1);
+}
+
+.dark .tagline-word.active {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Mobile menu transitions */
+.mobile-link {
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mobile-link.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Smooth scrollbar (non-essential) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #313131;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-section,
+  .timeline-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .tagline-word {
+    color: inherit !important;
+    transition: none;
+  }
+
+  .animate-spin-slow,
+  .animate-spin-slow-reverse,
+  .animate-bounce-slow {
+    animation: none;
+  }
+
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Nav active state */
+.nav-link.active {
+  color: #3B82F6;
+}
