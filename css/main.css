@@ -1022,27 +1022,11 @@
     gap: var(--sp-200);
   }
 
-  /* Staggered Blur-Rise Entrance */
-  @media (prefers-reduced-motion: no-preference) {
-    .hero-stagger {
-      opacity: 0;
-      transform: translateY(12px);
-      filter: blur(4px);
-      animation: hero-enter 550ms var(--ease-smooth) forwards;
-    }
-    .hero-stagger-1 { animation-delay: 40ms; }
-    .hero-stagger-2 { animation-delay: 120ms; }
-    .hero-stagger-3 { animation-delay: 200ms; }
-    .hero-stagger-4 { animation-delay: 280ms; }
-    .hero-stagger-5 { animation-delay: 360ms; }
-
-    @keyframes hero-enter {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-        filter: blur(0px);
-      }
-    }
+  /* Zero-Motion Swiss Entrance — Instant Crisp Render */
+  .hero-stagger {
+    opacity: 1;
+    transform: none;
+    filter: none;
   }
 
   /* B11 Mandatory Tagline Reveal */
@@ -1062,10 +1046,7 @@
   }
 
   .tagline-word {
-    color: var(--ink-faint);
-    transition-property: color;
-    transition-duration: 450ms;
-    transition-timing-function: var(--ease-smooth);
+    color: var(--ink-primary);
   }
 
   .tagline-word.is-lit {
@@ -1079,25 +1060,20 @@
     }
   }
 
-  /* Scroll Reveal Sections (B7) */
+  /* Zero-Motion Immediate Render — No Scroll Lag */
   .reveal-block {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 
-  @media (prefers-reduced-motion: no-preference) {
-    .js-ready .reveal-block {
-      opacity: 0;
-      transform: translateY(32px);
-      transition-property: opacity, transform;
-      transition-duration: 650ms;
-      transition-timing-function: var(--ease-smooth);
-    }
+  .js-ready .reveal-block {
+    opacity: 1;
+    transform: none;
+  }
 
-    .js-ready .reveal-block.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .js-ready .reveal-block.is-visible {
+    opacity: 1;
+    transform: none;
   }
 
   /* Surface Cards — Layered Shadows + Concentric Math */
@@ -1579,3 +1555,186 @@
   .mb-4 { margin-bottom: var(--sp-400); }
   .hidden { display: none !important; }
 }
+
+  /* ==========================================================================
+     Zero-Motion Swiss Editorial & Executive Practice Additions
+     ========================================================================== */
+
+  .btn-pdf-download {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-100);
+    padding: var(--sp-100) var(--sp-300);
+    border-radius: var(--r-md);
+    background-color: var(--bg-surface);
+    color: var(--ink-primary);
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow-border);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 140ms var(--ease-snappy), border-color 140ms var(--ease-snappy);
+    cursor: pointer;
+  }
+
+  .btn-pdf-download:hover {
+    background-color: var(--bg-subtle);
+    border-color: var(--ink-primary);
+    color: var(--ink-primary);
+  }
+
+  /* Static Talent Corridor Matrix */
+  .corridor-matrix-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-300);
+    margin-top: var(--sp-400);
+  }
+
+  @media (min-width: 920px) {
+    .corridor-matrix-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .corridor-card {
+    background-color: var(--bg-surface);
+    border-radius: var(--r-xl);
+    padding: var(--sp-400);
+    box-shadow: var(--shadow-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--sp-300);
+    border-top: 3px solid var(--teal);
+    transition: box-shadow 150ms var(--ease-snappy);
+  }
+
+  .corridor-card:hover {
+    box-shadow: var(--shadow-border-hover);
+  }
+
+  .corridor-tag {
+    display: inline-block;
+    padding: var(--sp-50) var(--sp-100);
+    border-radius: var(--r-sm);
+    background-color: var(--teal-soft);
+    color: var(--teal);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    width: fit-content;
+  }
+
+  .corridor-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--sp-200) 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-100);
+  }
+
+  .corridor-list li {
+    font-size: 0.875rem;
+    color: var(--ink-secondary);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--sp-75);
+    line-height: 1.45;
+  }
+
+  .corridor-list li::before {
+    content: "—";
+    color: var(--teal);
+    font-weight: 700;
+    margin-right: 2px;
+  }
+
+  .corridor-compliance-badge {
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    color: var(--ink-muted);
+    border-top: 1px solid var(--border-hairline);
+    padding-top: var(--sp-100);
+  }
+
+  /* Executive Placement Metrics & Discretion Strip */
+  .metrics-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-200);
+    margin-top: var(--sp-400);
+  }
+
+  @media (min-width: 768px) {
+    .metrics-strip {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .metric-box {
+    background-color: var(--bg-surface);
+    border-radius: var(--r-lg);
+    padding: var(--sp-300);
+    box-shadow: var(--shadow-border);
+  }
+
+  .metric-value {
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--ink-primary);
+    font-feature-settings: "tnum";
+    line-height: 1.1;
+  }
+
+  .metric-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-muted);
+    margin-top: var(--sp-50);
+    font-weight: 600;
+  }
+
+  /* Verified Case Summaries & Discretion Banner */
+  .placement-case-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-200);
+    margin-top: var(--sp-300);
+  }
+
+  @media (min-width: 768px) {
+    .placement-case-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .placement-case-card {
+    background-color: var(--bg-surface);
+    border-radius: var(--r-lg);
+    padding: var(--sp-300);
+    box-shadow: var(--shadow-border);
+    border-left: 3px solid var(--ink-primary);
+  }
+
+  .discretion-banner {
+    background-color: var(--bg-surface);
+    border-radius: var(--r-xl);
+    padding: var(--sp-400);
+    box-shadow: var(--shadow-border);
+    margin-top: var(--sp-400);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-300);
+  }
+
+  @media (min-width: 768px) {
+    .discretion-banner {
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+    }
+  }

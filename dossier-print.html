@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Katia Danishevska — Executive Search Dossier</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 16mm 16mm 16mm 16mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #111418;
+      background: #ffffff;
+      line-height: 1.45;
+      font-size: 11pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #111418;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+    .header-left h1 {
+      font-size: 20pt;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #111418;
+    }
+    .header-left p {
+      font-size: 11pt;
+      color: #4b5563;
+      margin-top: 2px;
+      font-weight: 500;
+    }
+    .header-right {
+      text-align: right;
+      font-size: 9pt;
+      color: #6b7280;
+      line-height: 1.4;
+    }
+    .header-right strong {
+      color: #111418;
+      font-size: 9.5pt;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: 10pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #0f766e;
+      font-weight: 700;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+    }
+    .summary-text {
+      font-size: 9.5pt;
+      color: #374151;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .metric-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 14px;
+    }
+    .metric-card {
+      text-align: center;
+    }
+    .metric-num {
+      font-size: 14pt;
+      font-weight: 700;
+      color: #0f766e;
+      font-feature-settings: "tnum";
+    }
+    .metric-label {
+      font-size: 8pt;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: 2px;
+    }
+    .timeline-item {
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #f1f5f9;
+    }
+    .timeline-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .role-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #111418;
+    }
+    .company-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 8.5pt;
+      color: #0f766e;
+      font-weight: 600;
+      margin-top: 1px;
+    }
+    .role-desc {
+      font-size: 8.5pt;
+      color: #4b5563;
+      margin-top: 3px;
+      line-height: 1.35;
+    }
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 6px;
+    }
+    .pill {
+      font-size: 7.5pt;
+      background: #f1f5f9;
+      color: #334155;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 500;
+    }
+    .footer {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 8px;
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 7.5pt;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <h1>Katia Danishevska</h1>
+      <p>Strategic Talent Partner &middot; Digital Assets &middot; FinTech &middot; Executive Search</p>
+    </div>
+    <div class="header-right">
+      <strong>Z&uuml;rich &middot; Zug &middot; Ljubljana</strong><br>
+      European &amp; Global Corridors<br>
+      linkedin.com/in/katia-danishevska-122224445
+    </div>
+  </div>
+
+  <p class="summary-text">
+    Strategic Talent Acquisition Partner with approximately ten years of dedicated talent acquisition and executive search experience across Switzerland and European technology hubs. Specializes in board, C-suite, engineering, and regulatory hires for digital asset institutions, FINMA-licensed digital banks, and high-growth fintechs.
+  </p>
+
+  <div class="metric-strip">
+    <div class="metric-card">
+      <div class="metric-num">~10 Years</div>
+      <div class="metric-label">Executive &amp; Tech Sourcing</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">5y 10m</div>
+      <div class="metric-label">Swiss Banking Tenure (Zug)</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-num">38 Days</div>
+      <div class="metric-label">Median Mandate Completion</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <h2 class="section-title">Career Milestones</h2>
+
+      <div class="timeline-item">
+        <div class="role-title">Senior Talent Acquisition Partner</div>
+        <div class="company-row">
+          <span>SwissChain &middot; Ljubljana, Slovenia</span>
+          <span>Oct 2025 &ndash; Present</span>
+        </div>
+        <p class="role-desc">
+          Leading full-cycle recruitment for core technical leadership, compliance, operations, finance, and business development across global digital asset initiatives.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="role-title">Talent Acquisition Partner (Successive Roles)</div>
+        <div class="company-row">
+          <span>AMINA Bank AG &middot; Zug, Switzerland</span>
+          <span>Jan 2020 &ndash; Oct 2025</span>
+        </div>
+        <p class="role-desc">
+          Served 5 years and 10 months inside FINMA-regulated Swiss crypto bank across three promotions: HR Specialist (2020), Senior HR Specialist (2022), and Talent Acquisition Partner (2024). Placed department heads, trading specialists, and regulatory personnel.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="role-title">IT Recruitment &amp; Agency Foundations</div>
+        <div class="company-row">
+          <span>ManpowerGroup &middot; ISG &middot; Adecco</span>
+          <span>2014 &ndash; 2019</span>
+        </div>
+        <p class="role-desc">
+          Built international headhunting, executive search, and technical sourcing capabilities across Slovenia and Central Europe.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="role-title">Education &amp; Credentials</div>
+        <div class="company-row">
+          <span>University of Ljubljana &middot; MSc HRM</span>
+          <span>2014 &ndash; 2018</span>
+        </div>
+        <p class="role-desc">
+          Master of Science in Human Resource Management (Grade: 9.38/10). Bachelor Degree in Human Resources (2010&ndash;2014).
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="section-title">Core Search Practice</h2>
+
+      <div style="margin-bottom: 12px;">
+        <strong style="font-size: 9pt; color: #111418;">Digital Assets &amp; Web3 Infrastructure</strong>
+        <p class="role-desc">Blockchain protocol engineers, MPC/HSM custody specialists, cryptography researchers, and smart contract auditors.</p>
+        <div class="pill-list">
+          <span class="pill">Custody Infra</span>
+          <span class="pill">Cryptography</span>
+          <span class="pill">DeFi Protocols</span>
+          <span class="pill">Distributed Systems</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 12px;">
+        <strong style="font-size: 9pt; color: #111418;">Regulated Finance &amp; Banking Governance</strong>
+        <p class="role-desc">C-Suite, FINMA compliance officers, AML/KYC managers, operational risk leaders, and institutional sales directors.</p>
+        <div class="pill-list">
+          <span class="pill">FINMA Regulatory</span>
+          <span class="pill">Chief Compliance Officer</span>
+          <span class="pill">Risk &amp; Governance</span>
+          <span class="pill">Institutional Sales</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 12px;">
+        <h2 class="section-title" style="margin-top: 14px;">Mandate Protocols</h2>
+        <p class="role-desc">
+          <strong>Confidentiality First:</strong> Strict non-disclosure agreements before candidate identity disclosure.
+        </p>
+        <p class="role-desc" style="margin-top: 4px;">
+          <strong>Rigorous Calibration:</strong> Sourcing begins only after direct alignment with founders and hiring committees on compensation and technical rubrics.
+        </p>
+        <p class="role-desc" style="margin-top: 4px;">
+          <strong>Multi-Market Corridors:</strong> Sourcing across Switzerland (Z&uuml;rich, Zug, Geneva), Central Europe, London, and international financial centers.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Executive Search Dossier &middot; Katia Danishevska</span>
+    <span>Prepared for Board, Founder, and Search Committee Review</span>
+    <span>katia-danishevska.pages.dev</span>
+  </div>
+</body>
+</html>

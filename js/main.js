@@ -1,6 +1,7 @@
 /**
  * Katia Danishevska — Core Interactive & Accessibility Behaviors
- * Follows modern web accessibility, form validation, and motion best practices.
+ * Zero-motion Swiss editorial implementation.
+ * Follows modern web accessibility, form validation, and minimal motion standards.
  */
 
 (function () {
@@ -9,11 +10,8 @@
   var htmlEl = document.documentElement;
   htmlEl.classList.add('js-ready');
 
-  var reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var darkSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
   // =========================================================================
-  // 1. DARK / LIGHT THEME OVERRIDE (modern-web-guidance: dark-mode-toggle)
+  // 1. DARK / LIGHT THEME OVERRIDE (Swiss Editorial Light Default)
   // =========================================================================
   var metaColorScheme = document.querySelector('meta[name="color-scheme"]');
   var themeToggleBtn = document.getElementById('theme-toggle');
@@ -37,26 +35,21 @@
 
   function getResolvedScheme() {
     var stored = getStoredScheme();
-    if (stored === 'dark' || stored === 'light') return stored;
-    return darkSchemeQuery.matches ? 'dark' : 'light';
+    if (stored === 'dark') return 'dark';
+    return 'light';
   }
 
   function syncThemeUI() {
-    var stored = getStoredScheme();
     var resolved = getResolvedScheme();
 
     if (metaColorScheme) {
-      metaColorScheme.setAttribute('content', stored === 'dark' || stored === 'light' ? stored : 'light dark');
+      metaColorScheme.setAttribute('content', resolved);
     }
 
-    if (stored === 'dark' || stored === 'light') {
-      htmlEl.setAttribute('data-theme', stored);
-    } else {
-      htmlEl.removeAttribute('data-theme');
-    }
+    htmlEl.setAttribute('data-theme', resolved);
 
     if (themeToggleBtn) {
-      var nextLabel = resolved === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+      var nextLabel = resolved === 'dark' ? 'Switch to Swiss light mode' : 'Switch to dark mode';
       themeToggleBtn.setAttribute('aria-label', nextLabel);
       themeToggleBtn.setAttribute('aria-pressed', resolved === 'dark' ? 'true' : 'false');
     }
@@ -66,21 +59,13 @@
 
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', function () {
-      var currentRendered = getResolvedScheme();
-      var target = currentRendered === 'dark' ? 'light' : 'dark';
-      var systemScheme = darkSchemeQuery.matches ? 'dark' : 'light';
-
-      // Revert to system default when target coincides with current OS setting
-      if (target === systemScheme) {
-        setStoredScheme(null);
-      } else {
-        setStoredScheme(target);
-      }
+      var current = getResolvedScheme();
+      var target = current === 'dark' ? 'light' : 'dark';
+      setStoredScheme(target);
       syncThemeUI();
     });
   }
 
-  darkSchemeQuery.addEventListener('change', syncThemeUI);
   window.addEventListener('storage', function (e) {
     if (e.key === 'color-scheme') syncThemeUI();
   });
@@ -88,7 +73,7 @@
   syncThemeUI();
 
   // =========================================================================
-  // 2. FLOATING NAVIGATION & MOBILE DRAWER (B7 + inert background)
+  // 2. FLOATING NAVIGATION & MOBILE DRAWER (with inert background trap)
   // =========================================================================
   var siteNav = document.getElementById('site-nav');
   var navSentinel = document.getElementById('nav-sentinel');
@@ -119,10 +104,6 @@
       lastFocusedBeforeDrawer = document.activeElement;
       document.body.style.overflow = 'hidden';
       var links = mobileDrawer.querySelectorAll('.mobile-drawer-link');
-      links.forEach(function (link, idx) {
-        var delay = Math.min(idx * 60, 360);
-        link.style.transitionDelay = reducedMotionQuery.matches ? '0ms' : delay + 'ms';
-      });
       if (links[0]) links[0].focus();
     } else {
       document.body.style.overflow = '';
@@ -152,85 +133,23 @@
   }
 
   // =========================================================================
-  // 3. SECTION REVEAL (IntersectionObserver — no unthrottled scroll)
+  // 3. ZERO-MOTION CONTENT RENDERING (Immediate readability)
   // =========================================================================
   var revealBlocks = document.querySelectorAll('.reveal-block');
-  if (revealBlocks.length) {
-    if (reducedMotionQuery.matches) {
-      revealBlocks.forEach(function (el) { el.classList.add('is-visible'); });
-    } else {
-      var revealObs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            revealObs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  revealBlocks.forEach(function (el) {
+    el.classList.add('is-visible');
+  });
 
-      revealBlocks.forEach(function (el) { revealObs.observe(el); });
-    }
-  }
-
-  // =========================================================================
-  // 4. B11 MANDATORY TAGLINE WORD-BY-WORD SCROLL REVEAL (rAF throttled)
-  // =========================================================================
   var taglineEl = document.getElementById('tagline-reveal');
   if (taglineEl) {
-    var rawText = taglineEl.textContent.trim();
-    var words = rawText.split(/\s+/);
-    taglineEl.textContent = '';
-
-    var wordSpans = [];
-    words.forEach(function (word, idx) {
-      var span = document.createElement('span');
-      span.className = 'tagline-word';
-      span.textContent = word;
-      taglineEl.appendChild(span);
-      wordSpans.push(span);
-      if (idx < words.length - 1) {
-        taglineEl.appendChild(document.createTextNode(' '));
-      }
-    });
-
-    if (reducedMotionQuery.matches) {
-      wordSpans.forEach(function (s) { s.classList.add('is-lit'); });
-    } else {
-      var rafTicking = false;
-
-      function updateTaglineWords() {
-        rafTicking = false;
-        var rect = taglineEl.getBoundingClientRect();
-        var vh = window.innerHeight || 800;
-        // Start illuminating when top enters bottom 85% of viewport, finish around 32% from top
-        var startY = vh * 0.86;
-        var endY = vh * 0.30;
-        var progress = (startY - rect.top) / Math.max(1, startY - endY);
-        var clamped = Math.max(0, Math.min(1, progress));
-        var litCount = Math.round(clamped * wordSpans.length);
-
-        for (var i = 0; i < wordSpans.length; i++) {
-          if (i < litCount) wordSpans[i].classList.add('is-lit');
-          else wordSpans[i].classList.remove('is-lit');
-        }
-      }
-
-      window.addEventListener('scroll', function () {
-        if (!rafTicking) {
-          rafTicking = true;
-          requestAnimationFrame(updateTaglineWords);
-        }
-      }, { passive: true });
-
-      updateTaglineWords();
-    }
+    taglineEl.classList.add('is-lit');
   }
 
   // =========================================================================
-  // 5. SCROLL PROGRESS FALLBACK (only when native scroll-timeline unsupported)
+  // 4. SCROLL PROGRESS INDICATOR (Native or lightweight sync)
   // =========================================================================
   var progressEl = document.getElementById('scroll-progress-bar');
-  if (progressEl && !CSS.supports('animation-timeline', 'scroll()') && !reducedMotionQuery.matches) {
+  if (progressEl && !CSS.supports('animation-timeline', 'scroll()')) {
     var pTicking = false;
     window.addEventListener('scroll', function () {
       if (!pTicking) {
@@ -246,7 +165,7 @@
   }
 
   // =========================================================================
-  // 6. SPLIT-ACCORDION
+  // 5. SPLIT-ACCORDION (Accessible disclosure widget)
   // =========================================================================
   document.querySelectorAll('.split-accordion').forEach(function (accordion) {
     var items = Array.from(accordion.querySelectorAll('.split-acc-item'));
@@ -276,7 +195,7 @@
   });
 
   // =========================================================================
-  // 7. COPY PROFILE LINK BUTTON
+  // 6. COPY LINK BUTTON
   // =========================================================================
   var copyBtn = document.getElementById('copy-linkedin-btn');
   var copyStatus = document.getElementById('copy-linkedin-status');
@@ -307,7 +226,7 @@
   }
 
   // =========================================================================
-  // 8. CLIENT-SIDE VALIDATED INQUIRY FORM (validate-input-after-interaction)
+  // 7. CLIENT-SIDE VALIDATED INQUIRY FORM
   // =========================================================================
   var contactForm = document.getElementById('inquiry-form');
   if (contactForm) {
@@ -319,7 +238,7 @@
     function getErrorMessage(field) {
       var v = field.validity;
       if (v.valueMissing) return field.getAttribute('data-err-required') || 'This field is required.';
-      if (v.typeMismatch && field.type === 'email') return 'Please enter a valid email address.';
+      if (v.typeMismatch && field.type === 'email') return 'Please enter a valid work email address.';
       if (v.tooShort) return 'Please share at least ' + field.minLength + ' characters.';
       return 'Please check this field.';
     }
@@ -375,12 +294,12 @@
         }
         contactForm.reset();
         formFields.forEach(function (f) { f.setAttribute('aria-invalid', 'false'); });
-      }, 450);
+      }, 350);
     });
   }
 
   // =========================================================================
-  // 9. NATIVE <dialog> MODALS (Privacy & Terms)
+  // 8. NATIVE <dialog> MODALS (Privacy, Terms & Executive Dossier Preview)
   // =========================================================================
   document.querySelectorAll('[data-open-dialog]').forEach(function (btn) {
     btn.addEventListener('click', function () {
