@@ -3,20 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light">
   <script>
     try {
       var s = localStorage.getItem('color-scheme');
-      if (s === 'dark' || s === 'light') {
-        document.querySelector('meta[name="color-scheme"]').content = s;
-        document.documentElement.setAttribute('data-theme', s);
+      if (s === 'dark') {
+        document.querySelector('meta[name="color-scheme"]').content = 'dark';
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.querySelector('meta[name="color-scheme"]').content = 'light';
+        document.documentElement.setAttribute('data-theme', 'light');
       }
-    } catch (e) {}
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
   </script>
 
   <title>Design &amp; Architecture Notes | Az. Consultant</title>
   <meta name="description" content="Engineering, typography, motion, accessibility, and edge deployment architecture prepared by Az. Consultant for Katia Danishevska.">
-  <meta name="robots" content="noindex">
   <link rel="canonical" href="https://katia-danishevska.pages.dev/design-notes.html">
 
   <meta property="og:site_name" content="Katia Danishevska">
@@ -44,7 +49,7 @@
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link title-4">Overview</a></li>
         <li><a href="experience.html" class="nav-link title-4">Experience</a></li>
-        <li><a href="mandates.html" class="nav-link title-4">Mandates</a></li>
+        <li><a href="mandates.html" class="nav-link title-4">Focus</a></li>
         <li><a href="design-notes.html" class="nav-link title-4" aria-current="page">Craft Notes</a></li>
       </ul>
 
@@ -68,9 +73,9 @@
   </header>
 
   <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile menu" aria-hidden="true">
-    <a href="index.html" class="mobile-drawer-link heading-5"><span>Return to Katia's Site</span><span class="mono-meta caption-4 text-muted">01</span></a>
+    <a href="index.html" class="mobile-drawer-link heading-5"><span>Return to Overview</span><span class="mono-meta caption-4 text-muted">01</span></a>
     <a href="experience.html" class="mobile-drawer-link heading-5"><span>Experience</span><span class="mono-meta caption-4 text-muted">02</span></a>
-    <a href="mandates.html" class="mobile-drawer-link heading-5"><span>Mandates</span><span class="mono-meta caption-4 text-muted">03</span></a>
+    <a href="mandates.html" class="mobile-drawer-link heading-5"><span>Focus</span><span class="mono-meta caption-4 text-muted">03</span></a>
   </aside>
 
   <main id="main" tabindex="-1">
@@ -80,7 +85,7 @@
           <a href="index.html" class="caption-2 text-secondary">← Return to Personal Website</a>
           <h1 class="heading-1 hero-gradient-text mt-2">Design &amp; Architecture Notes</h1>
           <p class="body-2 text-secondary mt-3">
-            Technical brief prepared by Az. Consultant outlining the visual choices, bespoke canvas engineering, accessibility safeguards, and edge delivery architecture behind this redesign proposal.
+            Technical brief prepared by Az. Consultant outlining the visual choices, factual calibration, accessibility safeguards, and edge delivery architecture behind this redesign proposal.
           </p>
         </div>
 
@@ -97,10 +102,10 @@
             </article>
 
             <article class="arch-node">
-              <span class="mono-meta caption-3 text-teal">02 · BESPOKE CANVAS</span>
-              <h3 class="title-2">Dual HTML5 2x Canvas</h3>
+              <span class="mono-meta caption-3 text-teal">02 · ZERO-MOTION EDITORIAL</span>
+              <h3 class="title-2">Quiet Luxury &amp; Instant Read</h3>
               <p class="body-6 text-secondary">
-                Architectural hero contour field and interactive Zürich to Ljubljana market corridor map rendered at crisp Retina density with reduced motion support.
+                Removed CPU-intensive canvas particle waves in favor of instant Swiss typographic layout, sub-140ms hover transitions, and immediate readability for executive partners.
               </p>
             </article>
 
@@ -126,7 +131,7 @@
           <article class="card">
             <h2 class="heading-5">Why This Direction Fits Katia's Brand</h2>
             <p class="body-5 text-secondary mt-2">
-              Her career spans regulated Swiss digital asset banking at AMINA Bank and senior executive hiring at SwissChain. Instead of generic dark gradients or synthetic portraits, the visual language pairs Swiss typographic restraint with warm alabaster light surfaces and calibrated dark graphite panels.
+              Her career spans Swiss digital asset banking at AMINA Bank (Zug) and senior talent acquisition at SwissChain. Instead of generic dark gradients or synthetic portraits, the visual language pairs Swiss typographic restraint with warm alabaster light surfaces and calibrated dark graphite panels.
             </p>
           </article>
 
@@ -148,20 +153,52 @@
           <span class="brand-badge" aria-hidden="true">KD</span>
           <span class="caption-2 text-secondary">© 2026 Katia Danishevska</span>
         </div>
+
         <div class="footer-links">
-          <a href="index.html" class="footer-text-link caption-2">Overview</a>
           <a href="experience.html" class="footer-text-link caption-2">Experience</a>
-          <a href="mandates.html" class="footer-text-link caption-2">Mandates</a>
+          <a href="mandates.html" class="footer-text-link caption-2">Focus</a>
+          <a href="https://www.linkedin.com/in/katia-danishevska-122224445" target="_blank" rel="noopener noreferrer" class="footer-text-link caption-2">LinkedIn</a>
+          <button type="button" class="footer-text-link caption-2" data-open-dialog="privacy-dialog">Privacy</button>
+          <button type="button" class="footer-text-link caption-2" data-open-dialog="legal-dialog">Terms &amp; Notice</button>
           <span class="caption-2 text-muted">Crafted by Az. Consultant</span>
         </div>
       </div>
+
       <div class="footer-disclaimer">
         <p class="caption-5 text-muted" style="max-width: 760px;">
-          <strong>Disclaimer:</strong> Design and architecture documentation prepared independently by Az. Consultant. No external links are embedded on consultant attribution.
+          <strong>Disclaimer:</strong> Independent personal website redesign concept prepared by Az. Consultant in response to Katia Danishevska's public LinkedIn post. All biography, tenure, and education details originate exclusively from publicly visible LinkedIn profile records, with no confidential data or official endorsement implied.
         </p>
       </div>
     </div>
   </footer>
+
+  <dialog id="privacy-dialog" class="site-dialog" closedby="any" aria-labelledby="privacy-title">
+    <div class="dialog-head">
+      <h2 id="privacy-title" class="heading-5">Privacy Notice</h2>
+      <form method="dialog">
+        <button type="submit" class="icon-btn" aria-label="Close privacy notice">
+          <svg width="16" height="16" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" aria-hidden="true"><path d="M56 56l144 144M200 56L56 200"/></svg>
+        </button>
+      </form>
+    </div>
+    <p class="body-5 text-secondary">
+      This static preview operates without analytics trackers, marketing cookies, or third party behavioral scripts.
+    </p>
+  </dialog>
+
+  <dialog id="legal-dialog" class="site-dialog" closedby="any" aria-labelledby="legal-title">
+    <div class="dialog-head">
+      <h2 id="legal-title" class="heading-5">Terms &amp; Concept Notice</h2>
+      <form method="dialog">
+        <button type="submit" class="icon-btn" aria-label="Close terms and notice">
+          <svg width="16" height="16" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" aria-hidden="true"><path d="M56 56l144 144M200 56L56 200"/></svg>
+        </button>
+      </form>
+    </div>
+    <p class="body-5 text-secondary">
+      This site is an independent design submission created by Az. Consultant for evaluation by Katia Danishevska. Company names appear strictly as historical career references from public LinkedIn records.
+    </p>
+  </dialog>
 
   <script defer src="js/main.js"></script>
 </body>

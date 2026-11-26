@@ -3,37 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light">
   <script>
     try {
       var s = localStorage.getItem('color-scheme');
-      if (s === 'dark' || s === 'light') {
-        document.querySelector('meta[name="color-scheme"]').content = s;
-        document.documentElement.setAttribute('data-theme', s);
+      if (s === 'dark') {
+        document.querySelector('meta[name="color-scheme"]').content = 'dark';
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.querySelector('meta[name="color-scheme"]').content = 'light';
+        document.documentElement.setAttribute('data-theme', 'light');
       }
-    } catch (e) {}
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
   </script>
 
-  <title>Advisory Mandates | Katia Danishevska</title>
-  <meta name="description" content="Executive search, strategic sourcing, and senior talent advisory across Digital Assets, FinTech, Banking, Compliance, and Technology.">
+  <title>Areas of Focus | Katia Danishevska</title>
+  <meta name="description" content="Recruitment for specialists, managers and senior leaders in fintech, blockchain and digital assets.">
   <link rel="canonical" href="https://katia-danishevska.pages.dev/mandates.html">
 
   <meta property="og:site_name" content="Katia Danishevska">
-  <meta property="og:title" content="Advisory Mandates | Katia Danishevska">
-  <meta property="og:description" content="How Katia Danishevska partners with founders, executives, and hiring managers across Europe and international digital finance.">
+  <meta property="og:title" content="Areas of Focus | Katia Danishevska">
+  <meta property="og:description" content="Recruitment for specialists, managers and senior leaders in fintech, blockchain and digital assets.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://katia-danishevska.pages.dev/mandates.html">
   <meta property="og:image" content="https://katia-danishevska.pages.dev/assets/og-card.jpg">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image" content="https://katia-danishevska.pages.dev/assets/kd-logo-square.jpg">
+
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
+  <!-- Typography: Geist & Geist Mono -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.min.css">
+
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -51,8 +56,7 @@
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link title-4">Overview</a></li>
         <li><a href="experience.html" class="nav-link title-4">Experience</a></li>
-        <li><a href="mandates.html" class="nav-link title-4" aria-current="page">Mandates</a></li>
-        <li><a href="index.html#atlas" class="nav-link title-4">Corridor</a></li>
+        <li><a href="mandates.html" class="nav-link title-4" aria-current="page">Focus</a></li>
         <li><a href="index.html#connect" class="nav-link title-4">Connect</a></li>
       </ul>
 
@@ -78,7 +82,7 @@
   <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile menu" aria-hidden="true">
     <a href="index.html" class="mobile-drawer-link heading-5"><span>Overview</span><span class="mono-meta caption-4 text-muted">01</span></a>
     <a href="experience.html" class="mobile-drawer-link heading-5"><span>Experience</span><span class="mono-meta caption-4 text-muted">02</span></a>
-    <a href="mandates.html" class="mobile-drawer-link heading-5"><span>Mandates</span><span class="mono-meta caption-4 text-muted">03</span></a>
+    <a href="mandates.html" class="mobile-drawer-link heading-5"><span>Focus</span><span class="mono-meta caption-4 text-muted">03</span></a>
     <a href="index.html#connect" class="mobile-drawer-link heading-5"><span>Connect</span><span class="mono-meta caption-4 text-muted">04</span></a>
   </aside>
 
@@ -87,51 +91,71 @@
       <div class="container">
         <div style="max-width: 680px;">
           <a href="index.html" class="caption-2 text-secondary">← Back to Overview</a>
-          <h1 class="heading-1 hero-gradient-text mt-2">Mandate Practice</h1>
+          <h1 class="heading-1 hero-gradient-text mt-2">Areas of Focus</h1>
           <p class="body-2 text-secondary mt-3">
-            Strategic talent acquisition across senior specialists, managers, and leadership roles for growing fintech, blockchain, and financial services companies.
+            Recruitment for specialists, managers and senior leaders in fintech, blockchain and digital assets.
           </p>
           <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px;">
-            <a href="assets/Katia-Danishevska-Executive-Dossier.pdf" download="Katia-Danishevska-Executive-Dossier.pdf" class="btn-pdf-download button-md" aria-label="Download Katia Danishevska Executive Dossier as PDF">
+            <a href="assets/Katia-Danishevska-Executive-Dossier.pdf" download="Katia-Danishevska-Career-Summary.pdf" class="btn-pdf-download button-md" aria-label="Download Katia Danishevska Career Summary as PDF">
               <svg width="16" height="16" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M48 32h112l48 48v144a8 8 0 0 1-8 8H48a8 8 0 0 1-8-8V40a8 8 0 0 1 8-8Z"/><path d="M160 32v48h48M128 120v64M96 152l32 32 32-32"/></svg>
-              <span>Download Executive Dossier (PDF)</span>
+              <span>Download Career Summary (PDF)</span>
             </a>
-            <a href="experience.html" class="btn btn-secondary button-md">View Full Timeline</a>
+            <a href="experience.html" class="btn btn-secondary button-md">View Career Progression</a>
           </div>
         </div>
 
-        <div class="grid-3 mt-6">
+        <div class="grid-2 mt-6" style="gap: 24px;">
           <article class="card">
             <span class="mono-meta caption-3 text-teal">01 · LEADERSHIP</span>
             <h2 class="title-1 mt-2">Executive &amp; Department Heads</h2>
             <p class="body-5 text-secondary mt-2">
-              Calibrating functional leadership mandates directly with founders and business heads to secure proven operators ready for regulated growth.
+              Recruitment for department heads and selected leadership roles, defined together with hiring managers and founders to secure experienced leaders for growing businesses.
             </p>
+            <ul style="display: flex; flex-direction: column; gap: 6px; margin-top: 12px;" class="body-6 text-secondary">
+              <li>· Functional department leadership</li>
+              <li>· Regional and market leads</li>
+              <li>· Senior management calibration</li>
+            </ul>
           </article>
 
           <article class="card">
             <span class="mono-meta caption-3 text-teal">02 · ENGINEERING</span>
-            <h2 class="title-1 mt-2">Technology &amp; Blockchain</h2>
+            <h2 class="title-1 mt-2">Technology &amp; Digital Assets</h2>
             <p class="body-5 text-secondary mt-2">
-              Targeted direct sourcing for software architects, security specialists, and core digital asset engineering teams across Europe.
+              Technology roles across digital assets and financial services, from software architecture and blockchain engineering to technical leadership.
             </p>
+            <ul style="display: flex; flex-direction: column; gap: 6px; margin-top: 12px;" class="body-6 text-secondary">
+              <li>· Software engineering &amp; architecture</li>
+              <li>· Blockchain &amp; distributed systems</li>
+              <li>· Security &amp; technical infrastructure</li>
+            </ul>
           </article>
 
           <article class="card">
             <span class="mono-meta caption-3 text-teal">03 · GOVERNANCE</span>
-            <h2 class="title-1 mt-2">Compliance, Finance &amp; Ops</h2>
+            <h2 class="title-1 mt-2">Compliance, Finance &amp; Operations</h2>
             <p class="body-5 text-secondary mt-2">
-              Building resilient institutional functions across regulatory compliance, risk, treasury operations, and business development.
+              Building resilient talent pipelines across regulatory compliance, operations, finance and business development roles.
             </p>
+            <ul style="display: flex; flex-direction: column; gap: 6px; margin-top: 12px;" class="body-6 text-secondary">
+              <li>· Regulatory compliance &amp; risk</li>
+              <li>· Financial operations &amp; treasury</li>
+              <li>· Core institutional processes</li>
+            </ul>
           </article>
-        </div>
 
-        <div class="mt-6" style="display: flex; flex-wrap: wrap; gap: 16px;">
-          <a href="https://www.linkedin.com/in/katia-danishevska-122224445" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-with-icon button-md">
-            <span>Connect on LinkedIn</span>
-            <svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M180 76L76 180M96 76h84v84"/></svg>
-          </a>
-          <a href="experience.html" class="btn btn-secondary button-md">Inspect Career Dossier</a>
+          <article class="card">
+            <span class="mono-meta caption-3 text-teal">04 · STRATEGIC SOURCING</span>
+            <h2 class="title-1 mt-2">Cross-Border Talent Pipelines</h2>
+            <p class="body-5 text-secondary mt-2">
+              Targeted international talent sourcing connecting high-caliber candidates across Switzerland, Slovenia, and wider European markets.
+            </p>
+            <ul style="display: flex; flex-direction: column; gap: 6px; margin-top: 12px;" class="body-6 text-secondary">
+              <li>· Direct sourcing &amp; network referrals</li>
+              <li>· Cross-cultural recruitment fluency</li>
+              <li>· Market intelligence &amp; availability</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -144,21 +168,53 @@
           <span class="brand-badge" aria-hidden="true">KD</span>
           <span class="caption-2 text-secondary">© 2026 Katia Danishevska</span>
         </div>
+
         <div class="footer-links">
-          <a href="index.html" class="footer-text-link caption-2">Overview</a>
           <a href="experience.html" class="footer-text-link caption-2">Experience</a>
+          <a href="mandates.html" class="footer-text-link caption-2" aria-current="page">Focus</a>
           <a href="https://www.linkedin.com/in/katia-danishevska-122224445" target="_blank" rel="noopener noreferrer" class="footer-text-link caption-2">LinkedIn</a>
+          <button type="button" class="footer-text-link caption-2" data-open-dialog="privacy-dialog">Privacy</button>
+          <button type="button" class="footer-text-link caption-2" data-open-dialog="legal-dialog">Terms &amp; Notice</button>
           <span class="caption-2 text-muted">Crafted by Az. Consultant</span>
         </div>
       </div>
+
       <div class="footer-disclaimer">
         <p class="caption-5 text-muted" style="max-width: 760px;">
-          <strong>Disclaimer:</strong> Independent design proposal prepared by Az. Consultant using publicly available LinkedIn profile details.
+          <strong>Disclaimer:</strong> Independent personal website redesign concept prepared by Az. Consultant in response to Katia Danishevska's public LinkedIn post. All biography, tenure, and education details originate exclusively from publicly visible LinkedIn profile records, with no confidential data or official endorsement implied.
         </p>
         <a href="design-notes.html" class="caption-4 text-secondary">View Design &amp; Architecture Notes</a>
       </div>
     </div>
   </footer>
+
+  <dialog id="privacy-dialog" class="site-dialog" closedby="any" aria-labelledby="privacy-title">
+    <div class="dialog-head">
+      <h2 id="privacy-title" class="heading-5">Privacy Notice</h2>
+      <form method="dialog">
+        <button type="submit" class="icon-btn" aria-label="Close privacy notice">
+          <svg width="16" height="16" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" aria-hidden="true"><path d="M56 56l144 144M200 56L56 200"/></svg>
+        </button>
+      </form>
+    </div>
+    <p class="body-5 text-secondary">
+      This static preview operates without analytics trackers, marketing cookies, or third party behavioral scripts.
+    </p>
+  </dialog>
+
+  <dialog id="legal-dialog" class="site-dialog" closedby="any" aria-labelledby="legal-title">
+    <div class="dialog-head">
+      <h2 id="legal-title" class="heading-5">Terms &amp; Concept Notice</h2>
+      <form method="dialog">
+        <button type="submit" class="icon-btn" aria-label="Close terms and notice">
+          <svg width="16" height="16" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" aria-hidden="true"><path d="M56 56l144 144M200 56L56 200"/></svg>
+        </button>
+      </form>
+    </div>
+    <p class="body-5 text-secondary">
+      This site is an independent design submission created by Az. Consultant for evaluation by Katia Danishevska. Company names appear strictly as historical career references from public LinkedIn records.
+    </p>
+  </dialog>
 
   <script defer src="js/main.js"></script>
 </body>

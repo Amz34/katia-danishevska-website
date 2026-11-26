@@ -146,7 +146,7 @@
   }
 
   // =========================================================================
-  // 4. SCROLL PROGRESS INDICATOR (Native or lightweight sync)
+  // 4. SCROLL PROGRESS INDICATOR
   // =========================================================================
   var progressEl = document.getElementById('scroll-progress-bar');
   if (progressEl && !CSS.supports('animation-timeline', 'scroll()')) {
@@ -165,37 +165,7 @@
   }
 
   // =========================================================================
-  // 5. SPLIT-ACCORDION (Accessible disclosure widget)
-  // =========================================================================
-  document.querySelectorAll('.split-accordion').forEach(function (accordion) {
-    var items = Array.from(accordion.querySelectorAll('.split-acc-item'));
-
-    function updateAccordion(openIdx) {
-      items.forEach(function (item, idx) {
-        var trigger = item.querySelector('.split-acc-trigger');
-        var isOpen = idx === openIdx;
-        item.classList.toggle('is-open', isOpen);
-        item.classList.toggle('is-before-open', openIdx !== -1 && idx === openIdx - 1);
-        item.classList.toggle('is-after-open', openIdx !== -1 && idx === openIdx + 1);
-        if (trigger) trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      });
-    }
-
-    var currentOpen = items.findIndex(function (el) { return el.classList.contains('is-open'); });
-    updateAccordion(currentOpen);
-
-    items.forEach(function (item, idx) {
-      var trigger = item.querySelector('.split-acc-trigger');
-      if (!trigger) return;
-      trigger.addEventListener('click', function () {
-        var willOpen = !item.classList.contains('is-open');
-        updateAccordion(willOpen ? idx : -1);
-      });
-    });
-  });
-
-  // =========================================================================
-  // 6. COPY LINK BUTTON
+  // 5. COPY LINK BUTTON
   // =========================================================================
   var copyBtn = document.getElementById('copy-linkedin-btn');
   var copyStatus = document.getElementById('copy-linkedin-status');
@@ -226,80 +196,67 @@
   }
 
   // =========================================================================
-  // 7. CLIENT-SIDE VALIDATED INQUIRY FORM
+  // 6. HONEST NOTE PREPARER (Formats note and copies to clipboard for LinkedIn)
   // =========================================================================
-  var contactForm = document.getElementById('inquiry-form');
-  if (contactForm) {
-    var formFields = Array.from(contactForm.querySelectorAll('[data-validate]'));
-    var formSkeleton = document.getElementById('inquiry-skeleton');
-    var formResult = document.getElementById('inquiry-result');
-    var submitBtn = document.getElementById('inquiry-submit');
+  var noteForm = document.getElementById('note-form');
+  if (noteForm) {
+    var noteStatus = document.getElementById('note-status');
+    var noteOutput = document.getElementById('note-output');
+    var noteLinkWrap = document.getElementById('note-link-wrap');
 
-    function getErrorMessage(field) {
-      var v = field.validity;
-      if (v.valueMissing) return field.getAttribute('data-err-required') || 'This field is required.';
-      if (v.typeMismatch && field.type === 'email') return 'Please enter a valid work email address.';
-      if (v.tooShort) return 'Please share at least ' + field.minLength + ' characters.';
-      return 'Please check this field.';
-    }
+    noteForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var nameEl = document.getElementById('note-name');
+      var topicEl = document.getElementById('note-topic');
+      var detailsEl = document.getElementById('note-details');
 
-    function validateField(field) {
-      var errEl = document.getElementById(field.id + '-error');
-      var ok = field.checkValidity();
-      field.setAttribute('aria-invalid', ok ? 'false' : 'true');
-      if (errEl) errEl.textContent = ok ? '' : getErrorMessage(field);
-      return ok;
-    }
+      var name = (nameEl ? nameEl.value : '').trim();
+      var topic = topicEl ? topicEl.value : '';
+      var details = (detailsEl ? detailsEl.value : '').trim();
 
-    formFields.forEach(function (field) {
-      var touched = false;
-      field.addEventListener('blur', function () {
-        if (field.value.trim().length > 0) touched = true;
-        if (touched) validateField(field);
-      });
-      field.addEventListener('input', function () {
-        if (field.getAttribute('aria-invalid') === 'true') {
-          validateField(field);
+      if (!name || !details) {
+        if (noteStatus) {
+          noteStatus.classList.remove('hidden');
+          noteStatus.textContent = 'Please add your name and a brief note.';
         }
-      });
-    });
-
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var firstInvalid = null;
-
-      formFields.forEach(function (field) {
-        if (!validateField(field) && !firstInvalid) {
-          firstInvalid = field;
-        }
-      });
-
-      if (firstInvalid) {
-        firstInvalid.focus();
         return;
       }
 
-      var senderName = (document.getElementById('inq-name')?.value || '').trim();
-      if (submitBtn) submitBtn.disabled = true;
-      if (formResult) formResult.classList.add('hidden');
-      if (formSkeleton) formSkeleton.classList.remove('hidden');
+      var note = 'Hello Katia,\n\nTopic: ' + topic + '\n\n' + details + '\n\n' + name;
 
-      setTimeout(function () {
-        if (formSkeleton) formSkeleton.classList.add('hidden');
-        if (submitBtn) submitBtn.disabled = false;
-        if (formResult) {
-          formResult.classList.remove('hidden');
-          formResult.textContent = 'Preview inquiry validated for ' + senderName +
-            '. Because this design proposal runs statically without a live mail relay, please forward messages directly via LinkedIn.';
+      var finishCopy = function () {
+        if (noteStatus) {
+          noteStatus.classList.remove('hidden');
+          noteStatus.textContent = 'Note copied to clipboard! Paste it into a LinkedIn message to Katia.';
         }
-        contactForm.reset();
-        formFields.forEach(function (f) { f.setAttribute('aria-invalid', 'false'); });
-      }, 350);
+        if (noteLinkWrap) noteLinkWrap.classList.remove('hidden');
+        if (noteOutput) {
+          noteOutput.classList.remove('hidden');
+          noteOutput.value = note;
+        }
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(note).then(finishCopy, function () {
+          if (noteOutput) {
+            noteOutput.classList.remove('hidden');
+            noteOutput.value = note;
+            noteOutput.select();
+          }
+          if (noteStatus) {
+            noteStatus.classList.remove('hidden');
+            noteStatus.textContent = 'Copy the formatted note below and paste it into LinkedIn:';
+          }
+          if (noteLinkWrap) noteLinkWrap.classList.remove('hidden');
+        });
+      } else {
+        finishCopy();
+      }
     });
   }
 
   // =========================================================================
-  // 8. NATIVE <dialog> MODALS (Privacy, Terms & Executive Dossier Preview)
+  // 7. NATIVE <dialog> MODALS (Privacy, Terms & Notices)
   // =========================================================================
   document.querySelectorAll('[data-open-dialog]').forEach(function (btn) {
     btn.addEventListener('click', function () {
